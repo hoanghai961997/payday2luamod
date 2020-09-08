@@ -3,7 +3,7 @@ Hooks:PostHook(WeaponTweakData, "init", "Contrac308VariousModInit", function(sel
 	self:SetupAttachmentPoint( "tti", {
         name = "a_m_custom",
         base_a_obj = "a_m",
-        position = Vector3( 0, 0.5, 1.5 ),
+        position = Vector3( 0, 0.5, 1.2 ),
 		rotation = RotationCAP(0, 0, 0)
     })
 
