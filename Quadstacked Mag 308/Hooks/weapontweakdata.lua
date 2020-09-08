@@ -1,4 +1,4 @@
-Hooks:PostHook(WeaponTweakData, "init", "Contrac308VariousModInit", function(self)
+Hooks:PostHook(WeaponTweakData, "init", "contractor308", function(self)
 
 	self:SetupAttachmentPoint( "tti", {
         name = "a_m_custom",
