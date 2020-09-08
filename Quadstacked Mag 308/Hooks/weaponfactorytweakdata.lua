@@ -1,4 +1,4 @@
-Hooks:PostHook( WeaponFactoryTweakData, "init", "Contrac308VariousModInit", function(self)
+Hooks:PostHook( WeaponFactoryTweakData, "init", "contractor308", function(self)
 
 self.parts.wpn_fps_snp_tti_m_quad.override_weapon_multiply = {
 	CLIP_AMMO_MAX = 2, 
