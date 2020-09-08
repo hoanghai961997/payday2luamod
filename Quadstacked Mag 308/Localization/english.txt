@@ -1,0 +1,4 @@
+{
+"bm_wp_wpn_fps_snp_tti_m_quad" : "Quadstacked Magazine"
+
+}
