@@ -6,13 +6,13 @@ if not self.wpn_fps_shot_b682.override then
 	self.wpn_fps_shot_b682.override = {}
 end
 self.wpn_fps_shot_b682.override.wpn_fps_upg_o_t1micro = {
-	stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(0, -9, -4),rotation = Rotation(0, 0, 0)}}
+	stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(0, -9, -4.4),rotation = Rotation(0, 0, 0)}}
 }
 self.wpn_fps_shot_b682.override.wpn_fps_upg_o_docter = {
-	stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(0, -9, -4),rotation = Rotation(0, 0, 0)}}
+	stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(0, -9, -4.4),rotation = Rotation(0, 0, 0)}}
 }
 self.wpn_fps_shot_b682.override.wpn_fps_upg_o_cmore = {
-	stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(0, -9, -4),rotation = Rotation(0, 0, 0)}}
+	stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(0, -9, -4.4),rotation = Rotation(0, 0, 0)}}
 }
 self.wpn_fps_shot_b682.override.wpn_fps_upg_o_cs = {
 	stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(0, -9, -4.4),rotation = Rotation(0, 0, 0)}}
