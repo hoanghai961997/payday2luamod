@@ -62,6 +62,7 @@ self.wpn_fps_shot_b682.override.wpn_fps_upg_o_45rds = {
 self.wpn_fps_shot_b682.override.wpn_fps_upg_o_45rds_v2 = {
 	stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(-3.65, 0, -13.15),rotation = Rotation(0, 0, -45)}}
 }
+self.wpn_fps_shot_b682.override.wpn_fps_shot_r870_body_rack = {a_obj ="a_body_custom"}
 self.wpn_fps_shot_b682.adds.wpn_fps_upg_o_t1micro = {
 	"wpn_fps_shot_r870_ris_special"
 }
@@ -128,5 +129,6 @@ table.insert(self.wpn_fps_shot_b682.uses_parts, "wpn_fps_upg_fl_ass_smg_sho_peqb
 table.insert(self.wpn_fps_shot_b682.uses_parts, "wpn_fps_upg_fl_ass_laser")
 table.insert(self.wpn_fps_shot_b682.uses_parts, "wpn_fps_upg_fl_ass_peq15")
 table.insert(self.wpn_fps_shot_b682.uses_parts, "wpn_fps_upg_fl_ass_utg")
+table.insert(self.wpn_fps_shot_b682.uses_parts, "wpn_fps_shot_r870_body_rack")
 
 end )
