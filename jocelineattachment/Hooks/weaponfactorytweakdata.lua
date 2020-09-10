@@ -66,13 +66,13 @@ self.wpn_fps_shot_b682.override.wpn_fps_upg_o_xpsg33_magnifier = {
 	stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(0, -2, -4.4),rotation = Rotation(0, 0, 0)}}
 }
 self.wpn_fps_shot_b682.override.wpn_fps_upg_o_45rds = {
-	stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(-3.65, 0, -13.15),rotation = Rotation(0, 0, -45)}}
+	stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(-3.55, -23.248, -13.65),rotation = Rotation(0, 0, -45)}}
 }
 self.wpn_fps_shot_b682.override.wpn_fps_upg_o_45rds_v2 = {
-	stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(-3.65, 0, -13.15),rotation = Rotation(0, 0, -45)}}
+	stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(-3.55, -23.248, -13.65),rotation = Rotation(0, 0, -45)}}
 }
 self.wpn_fps_shot_b682.override.wpn_fps_upg_o_45steel = {
-	stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(-3.65, 0, -13.15),rotation = Rotation(0, 0, -45)}}
+	stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(-3.55, -23.248, -13.65),rotation = Rotation(0, 0, -45)}}
 }
 self.wpn_fps_shot_b682.override.wpn_fps_shot_r870_body_rack = {a_obj ="a_body_custom"}
 self.wpn_fps_shot_b682.adds.wpn_fps_upg_o_t1micro = {
