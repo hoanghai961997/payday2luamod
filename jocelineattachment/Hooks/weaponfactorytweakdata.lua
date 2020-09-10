@@ -6,39 +6,36 @@ if not self.wpn_fps_shot_b682.override then
 	self.wpn_fps_shot_b682.override = {}
 end
 self.wpn_fps_shot_b682.override.wpn_fps_upg_o_t1micro = {
-	stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(0, -9, -4.4),rotation = Rotation(0, 0, 0)}}
+	stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(0, -16, -4.4),rotation = Rotation(0, 0, 0)}}
 }
 self.wpn_fps_shot_b682.override.wpn_fps_upg_o_docter = {
-	stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(0, -9, -4.4),rotation = Rotation(0, 0, 0)}}
+	stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(0, -16, -4.4),rotation = Rotation(0, 0, 0)}}
 }
 self.wpn_fps_shot_b682.override.wpn_fps_upg_o_cmore = {
-	stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(0, -9, -4.4),rotation = Rotation(0, 0, 0)}}
+	stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(0, -16, -4.4),rotation = Rotation(0, 0, 0)}}
 }
 self.wpn_fps_shot_b682.override.wpn_fps_upg_o_cs = {
-	stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(0, -9, -4.4),rotation = Rotation(0, 0, 0)}}
+	stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(0, -16, -4.4),rotation = Rotation(0, 0, 0)}}
 }
 self.wpn_fps_shot_b682.override.wpn_fps_upg_o_reflex = {
-	stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(0, -9, -4.4),rotation = Rotation(0, 0, 0)}}
+	stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(0, -16, -4.4),rotation = Rotation(0, 0, 0)}}
 }
 self.wpn_fps_shot_b682.override.wpn_fps_upg_o_rx01 = {
-	stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(0, -9, -4.4),rotation = Rotation(0, 0, 0)}}
+	stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(0, -16, -4.4),rotation = Rotation(0, 0, 0)}}
 }
 self.wpn_fps_shot_b682.override.wpn_fps_upg_o_eotech = {
-	stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(0, -9, -4.4),rotation = Rotation(0, 0, 0)}}
+	stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(0, -16, -4.4),rotation = Rotation(0, 0, 0)}}
 }
 self.wpn_fps_shot_b682.override.wpn_fps_upg_o_eotech_xps = {
-	stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(0, -9, -4.4),rotation = Rotation(0, 0, 0)}}
+	stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(0, -16, -4.4),rotation = Rotation(0, 0, 0)}}
 }
 self.wpn_fps_shot_b682.override.wpn_fps_upg_o_rx30 = {
-	stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(0, -9, -4.4),rotation = Rotation(0, 0, 0)}}
+	stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(0, -16, -4.4),rotation = Rotation(0, 0, 0)}}
 }
 self.wpn_fps_shot_b682.override.wpn_fps_upg_o_aimpoint = {
 	stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(0, -9, -4.4),rotation = Rotation(0, 0, 0)}}
 }
 self.wpn_fps_shot_b682.override.wpn_fps_upg_o_aimpoint_2 = {
-	stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(0, -9, -4.4),rotation = Rotation(0, 0, 0)}}
-}
-self.wpn_fps_shot_b682.override.wpn_fps_upg_o_eotech = {
 	stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(0, -9, -4.4),rotation = Rotation(0, 0, 0)}}
 }
 self.wpn_fps_shot_b682.override.wpn_fps_upg_o_specter = {
@@ -51,13 +48,13 @@ self.wpn_fps_shot_b682.override.wpn_fps_upg_o_spot = {
 	stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(0, -9, -4.4),rotation = Rotation(0, 0, 0)}}
 }
 self.wpn_fps_shot_b682.override.wpn_fps_upg_o_uh = {
-	stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(0, -9, -4.4),rotation = Rotation(0, 0, 0)}}
+	stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(0, -16, -4.4),rotation = Rotation(0, 0, 0)}}
 }
 self.wpn_fps_shot_b682.override.wpn_fps_upg_o_bmg = {
 	stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(0, -9, -4.4),rotation = Rotation(0, 0, 0)}}
 }
 self.wpn_fps_shot_b682.override.wpn_fps_upg_o_fc1 = {
-	stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(0, -9, -4.4),rotation = Rotation(0, 0, 0)}}
+	stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(0, -16, -4.4),rotation = Rotation(0, 0, 0)}}
 }
 self.wpn_fps_shot_b682.override.wpn_fps_upg_o_sig = {
 	stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(0, -2, -4.4),rotation = Rotation(0, 0, 0)}}
