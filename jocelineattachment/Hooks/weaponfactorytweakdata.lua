@@ -126,12 +126,6 @@ self.wpn_fps_shot_b682.adds.wpn_fps_upg_o_bmg = {
 self.wpn_fps_shot_b682.adds.wpn_fps_upg_o_fc1 = {
 	"wpn_fps_shot_r870_ris_special"
 }
-self.wpn_fps_shot_b682.adds.wpn_fps_upg_o_leupold = {
-	"wpn_fps_shot_r870_ris_special"
-}
-self.wpn_fps_shot_b682.adds.wpn_fps_upg_o_box = {
-	"wpn_fps_shot_r870_ris_special"
-}
 
 table.insert(self.wpn_fps_shot_b682.uses_parts, "wpn_fps_upg_o_t1micro")
 table.insert(self.wpn_fps_shot_b682.uses_parts, "wpn_fps_upg_o_docter")
