@@ -3,6 +3,7 @@ Hooks:PostHook( WeaponFactoryTweakData, "init", "amcardelta", function(self)
 self.parts.wpn_fps_ass_amcar_os_frontsight = clone(self.parts.wpn_fps_ass_m16_os_frontsight)
 self.parts.wpn_fps_amcar_uupg_body_upperreciever_new = clone(self.parts.wpn_fps_amcar_uupg_body_upperreciever)
 self.parts.wpn_fps_amcar_uupg_body_upperreciever_new.forbids = {}
+self.parts.wpn_fps_amcar_uupg_body_upperreciever_new.type = "upper_reciever"
 
 self.wpn_fps_ass_amcar.adds.wpn_fps_upg_o_t1micro = {
 	"wpn_fps_ass_amcar_os_frontsight",
