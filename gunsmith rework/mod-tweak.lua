@@ -461,6 +461,31 @@ table.insert(self.wpn_fps_shot_huntsman.uses_parts, "wpn_fps_upg_fl_pis_tlr1")
 table.insert(self.wpn_fps_shot_huntsman.uses_parts, "wpn_fps_upg_o_45rds_v2")
 table.insert(self.wpn_fps_shot_huntsman.uses_parts, "wpn_fps_upg_o_45rds")
 table.insert(self.wpn_fps_shot_huntsman.uses_parts, "wpn_fps_upg_o_45steel")
+--Breaker 12G--
+self.wpn_fps_sho_boot.override = {wpn_fps_shot_r870_body_rack = {
+		a_obj ="a_body_custom",
+		forbids = {
+				"wpn_fps_upg_fl_ass_smg_sho_surefire",
+				"wpn_fps_upg_fl_ass_smg_sho_peqbox",
+				"wpn_fps_upg_fl_ass_laser",
+				"wpn_fps_upg_fl_ass_peq15",
+				"wpn_fps_upg_fl_ass_utg"
+			}
+	}
+}
+table.insert(self.wpn_fps_sho_boot.uses_parts, "wpn_fps_shot_r870_body_rack")
+--M1014--
+self.wpn_fps_sho_ben.override = {wpn_fps_shot_r870_body_rack = {a_obj ="a_body_custom"}}
+table.insert(self.wpn_fps_sho_ben.uses_parts, "wpn_fps_shot_r870_body_rack")
+--Raven--
+self.wpn_fps_sho_ksg.override = {wpn_fps_shot_r870_body_rack = {a_obj ="a_body_custom"}}
+table.insert(self.wpn_fps_sho_ksg.uses_parts, "wpn_fps_upg_ns_ass_smg_v6")
+table.insert(self.wpn_fps_sho_ksg.uses_parts, "wpn_fps_shot_r870_body_rack")
+--Predator 12G--
+self.wpn_fps_sho_spas12.override = {wpn_fps_shot_r870_body_rack = {a_obj ="a_body_custom"}}
+table.insert(self.wpn_fps_sho_spas12.uses_parts, "wpn_fps_shot_r870_body_rack")
+--Contractor .308--
+table.insert(self.wpn_fps_snp_tti.uses_parts, "wpn_fps_upg_o_mbus_rear")
 --Claire 12G--
 self.wpn_fps_sho_coach.override= {
 	wpn_fps_upg_o_t1micro = {stance_mod = {wpn_fps_sho_coach = {translation = Vector3(0, -3, -3),rotation = Rotation(0, 0, 0)}}},
@@ -484,7 +509,7 @@ self.parts.wpn_fps_sho_coach_b_short.forbids = {
 	"wpn_fps_upg_fl_pis_m3x"
 }
 self.wpn_fps_sho_coach.adds = {
-	wpn_fps_upg_o_t1micro = {"wpn_fps_ass_sub2000_o_adapter"},
+	wpn_fps_upg_o_t1micro = {"wpn_fps_smg_thompson_o_adapter"},
 	wpn_fps_upg_o_docter = {"wpn_fps_smg_thompson_o_adapter"},
 	wpn_fps_upg_o_cmore = {"wpn_fps_smg_thompson_o_adapter"},
 	wpn_fps_upg_o_cs = {"wpn_fps_smg_thompson_o_adapter"},

@@ -6,53 +6,74 @@ self:SetupAttachmentPoint( "amcar", {
 	base_a_obj = "a_o",
 	position = Vector3( 0, -1.2, 3.9 )}
 )
+self.amcar.stats.damage = 55
 self.amcar.AMMO_MAX = 240
 --AK--
+self.ak74.stats.damage = 45
 --CAR-4--
+self.new_m4.stats.damage = 55
 self.new_m4.AMMO_MAX = 120
 --UAR--
 --AK.762--
+self.akm.stats.damage = 92
 --JP36--
+self.g36.stats.damage = 55
 --Galant--
 self.ching.AMMO_PICKUP = {0.7, 2.50}
 --M308--
+self.new_m14.stats.damage = 95
 self.new_m14.CLIP_AMMO_MAX = 20 -- magazine size.
 self.new_m14.AMMO_MAX = 60 -- total ammo.
 self.new_m14.AMMO_PICKUP = {0.7, 2.45} --ammo pickup.
 --AK5--
+self.ak5.stats.damage = 55
 self.ak5.AMMO_MAX = 120
 --AMR-16--
+self.m16.stats.damage = 55
 self.m16.CLIP_AMMO_MAX = 20 -- magazine size.
 self.m16.AMMO_MAX = 120 -- total ammo.
 --Tempest-21--
+self.komodo.stats.damage = 55
 self.komodo.AMMO_MAX = 120
 --Union 5.56--
+self.corgi.stats.damage = 55
 self.corgi.AMMO_MAX = 120
 --Commando 553--
+self.s552.stats.damage = 55
 --Eagel Heavy--
+self.scar.stats.damage = 95
 --Cavity 9mm--
 self.sub2000.categories = {"smg"} -- change to smg class.
 self.sub2000.use_data.selection_index = 1 -- change to secondary.
 self.sub2000.AMMO_PICKUP = {0.66, 2.31}
 --AK17--
+self.flint.stats.damage = 45
 self.flint.CLIP_AMMO_MAX = 30 -- magazine size.
 self.flint.AMMO_MAX = 90 -- total ammo.
 --Bootleg--
+self.tecci.stats.damage = 55
 --Queen's Wrath--
+self.l85a2.stats.damage = 55
 self.l85a2.AMMO_MAX = 120
 --Clarion--
+self.famas.stats.damage = 55
 self.famas.CLIP_AMMO_MAX = 25 -- magazine size.
 self.famas.AMMO_MAX = 75 -- total ammo.
 --Lion's Roar--
+self.vhs.stats.damage = 55
 --Valkyria--
+self.asval.stats.damage = 42
 --Gecko 7.62--
+self.galil.stats.damage = 95
 self.galil.CLIP_AMMO_MAX = 25 -- magazine size.
 --Little Friend 7.62--
+self.contraband.stats.damage = 95
 self.contraband.AMMO_MAX = 60 -- total ammo.
 self.contraband.AMMO_PICKUP = {0.7, 2.45}
 --Falcon--
+self.fal.stats.damage = 95
 --Gewehr 3--
---Golden AK.762--
+self.g3.stats.damage = 95
 --------------LMG--------------
 --KSP 58--
 self.par.CLIP_AMMO_MAX = 100 -- magazine size.
@@ -99,16 +120,37 @@ self:SetupAttachmentPoint( "huntsman", {
 	part_attach_data = {
 		{"wpn_fps_shot_huntsman_b_long"},
 		"g_long_barrel"},	
-	position = Vector3( 0, 34, 0 )})
+	position = Vector3( 0, 34, 0 )
+})
 --Breaker 12G--
+self:SetupAttachmentPoint( "boot", {
+	name = "a_body_custom",
+	base_a_obj = "a_body",
+	position = Vector3( 0.1, 33, 3.6 ), rotation = RotationCAP(0.4, 0, -180)
+})
 self.boot.CLIP_AMMO_MAX = 5 -- magazine size.
 self.boot.AMMO_MAX = 20 -- total ammo.
 --M1014--
+self:SetupAttachmentPoint( "benelli", {
+	name = "a_body_custom",
+	base_a_obj = "a_body",
+	position = Vector3( -0.2, 18, 7.2 )
+})
 self.benelli.CLIP_AMMO_MAX = 7 -- magazine size.
 self.benelli.AMMO_MAX = 63 -- total ammo.
 --Raven--
+self:SetupAttachmentPoint( "ksg", {
+	name = "a_body_custom",
+	base_a_obj = "a_body",
+	position = Vector3( 0.5, -10, 9 ), rotation = RotationCAP(0, 0, 26)
+})
 --Steakout 12G--
 --Predator 12G--
+self:SetupAttachmentPoint( "spas12", {
+	name = "a_body_custom",
+	base_a_obj = "a_body",
+	position = Vector3( -0.1, 18, 7.5 )
+})
 --Joceline O/U 12G--
 self:SetupAttachmentPoint( "b682", {
 	name = "a_o",
@@ -117,7 +159,8 @@ self:SetupAttachmentPoint( "b682", {
 		{"wpn_fps_shot_b682_b_short",
 		"wpn_fps_shot_b682_b_long"},
 		"g_barrel_lod0"},
-	position = Vector3( 0, 20, 5.7 )})
+	position = Vector3( 0, 20, 5.7 )
+})
 self:SetupAttachmentPoint( "b682", {
 	name = "a_fl",
 	base_a_obj = "a_b",
@@ -125,11 +168,13 @@ self:SetupAttachmentPoint( "b682", {
 		{"wpn_fps_shot_b682_b_short",
 		"wpn_fps_shot_b682_b_long"},
 		"g_barrel_lod0"},
-	position = Vector3( 1.9, 17, 1 )})
+	position = Vector3( 1.9, 17, 1 )
+})
 self:SetupAttachmentPoint( "b682", {
 	name = "a_body_custom",
 	base_a_obj = "a_body",
-	position = Vector3( -0.2, 10, -4.8 ), rotation = RotationCAP(0, 0, -180)})
+	position = Vector3( -0.2, 10, -4.8 ), rotation = RotationCAP(0, 0, -180)
+})
 ----------Sniper Rilfe---------
 --Platypus 70--
 --Rattlesnake--
@@ -138,6 +183,16 @@ self.wa2000.CLIP_AMMO_MAX = 6 -- magazine size.
 self.wa2000.AMMO_MAX = 42 -- total ammo.
 --Desertfox--
 --Contractor .308--
+self:SetupAttachmentPoint( "tti", {
+	name = "a_o_r",
+	base_a_obj = "a_o",
+	position = Vector3( 0, -13, 0.2 )}
+)
+self:SetupAttachmentPoint( "tti", {
+	name = "a_o_f",
+	base_a_obj = "a_o",
+	position = Vector3( 0, 35, 0.2 )}
+)
 --R93--
 self.r93.CLIP_AMMO_MAX = 5
 --Repeater 1874--
