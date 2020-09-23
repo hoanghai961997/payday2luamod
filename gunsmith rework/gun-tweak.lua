@@ -69,6 +69,37 @@ self.mg42.CLIP_AMMO_MAX = 50 -- magazine size.
 self.saiga.CLIP_AMMO_MAX = 8 -- magazine size.
 self.saiga.AMMO_MAX = 72 -- total ammo.
 --Mosconi 12G--
+self:SetupAttachmentPoint( "huntsman", {
+	name = "a_o",
+	base_a_obj = "a_b",
+	part_attach_data = {
+		{"wpn_fps_shot_huntsman_b_long"},
+		"g_long_barrel"},	
+	position = Vector3( 0, 16.4, 2 )
+})
+self:SetupAttachmentPoint( "huntsman", {
+	name = "a_o_sm",
+	base_a_obj = "a_b",
+	part_attach_data = {
+		{"wpn_fps_shot_huntsman_b_short"},
+		"g_short_barrel"},	
+	position = Vector3( 0, 16.4, 2 )
+})
+self:SetupAttachmentPoint( "huntsman", {
+	name = "a_fl",
+	base_a_obj = "a_b",
+	part_attach_data = {
+		{"wpn_fps_shot_huntsman_b_long"},
+		"g_long_barrel"},	
+	position = Vector3( 0, 36, -0.8 )
+})
+self:SetupAttachmentPoint( "huntsman", {
+	name = "a_fg",
+	base_a_obj = "a_b",
+	part_attach_data = {
+		{"wpn_fps_shot_huntsman_b_long"},
+		"g_long_barrel"},	
+	position = Vector3( 0, 34, 0 )})
 --Breaker 12G--
 self.boot.CLIP_AMMO_MAX = 5 -- magazine size.
 self.boot.AMMO_MAX = 20 -- total ammo.
@@ -172,6 +203,30 @@ self.serbu.single = {fire_rate = 0.575}
 --Goliath 12G--
 --Grimm 12G--
 --Claire 12G--
+self:SetupAttachmentPoint( "coach", {
+	name = "a_o",
+	base_a_obj = "a_b",
+	part_attach_data = {
+		{"wpn_fps_sho_coach_b_standard","wpn_fps_sho_coach_b_short"},
+		"g_barrel"},	
+	position = Vector3( 0, 10.2, 4.16 )
+})
+self:SetupAttachmentPoint( "coach", {
+	name = "a_fl",
+	base_a_obj = "a_b",
+	part_attach_data = {
+		{"wpn_fps_sho_coach_b_standard","wpn_fps_sho_coach_b_short"},
+		"g_barrel"},	
+	position = Vector3( 0, 34, 0.9 )
+})
+self:SetupAttachmentPoint( "coach", {
+	name = "a_fg",
+	base_a_obj = "a_b",
+	part_attach_data = {
+		{"wpn_fps_sho_coach_b_standard","wpn_fps_sho_coach_b_short"},
+		"g_barrel"},	
+	position = Vector3( 0, 32, 1.8 )
+})
 --GSPS 12G--
 self.m37.CLIP_AMMO_MAX = 4 -- magazine size.
 --Street Sweeper--
