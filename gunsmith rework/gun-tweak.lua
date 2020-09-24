@@ -6,6 +6,21 @@ self:SetupAttachmentPoint( "amcar", {
 	base_a_obj = "a_o",
 	position = Vector3( 0, -1.2, 3.9 )}
 )
+self:SetupAttachmentPoint( "amcar", {
+	name = "a_os_new",
+	base_a_obj = "a_os",
+	position = Vector3( 0, 5.7, 2.6 )}
+)
+self:SetupAttachmentPoint( "amcar", {
+	name = "a_os_new1",
+	base_a_obj = "a_os",
+	position = Vector3( 0, 0.7, 2.6 )}
+)
+self:SetupAttachmentPoint( "amcar", {
+	name = "a_fl",
+	base_a_obj = "a_fl",
+	position = Vector3( -0.9, 0, 0.1 )}
+)
 self.amcar.stats.damage = 55
 self.amcar.AMMO_MAX = 240
 --AK--
@@ -203,11 +218,16 @@ self.r93.CLIP_AMMO_MAX = 5
 -------------Pistol------------
 --Chimano 88--
 self.glock_17.CLIP_AMMO_MAX = 19 -- magazine size.
-self.glock_17.AMMO_MAX = 154 -- total ammo.
+self.glock_17.AMMO_MAX = 152 -- total ammo.
 --Crosskill--
 self.colt_1911.CLIP_AMMO_MAX = 7 -- magazine size.
 self.colt_1911.AMMO_MAX = 91 -- total ammo.
 --Bernetti 9--
+self:SetupAttachmentPoint( "b92fs", {
+	name = "a_b_custom",
+	base_a_obj = "a_sl",
+	position = Vector3( 0, 7.2, -1.45 )}
+)
 self.b92fs.CLIP_AMMO_MAX = 15 -- magazine size.
 self.b92fs.AMMO_MAX = 150 -- total ammo.
 --Bronco .44--
