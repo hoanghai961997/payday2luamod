@@ -182,19 +182,16 @@ self.parts.wpn_fps_upg_o_sig.forbids = {
 }
 -----------------------------------------------------------------------------------------------------------------------------------------------Gadgets
 ---------------------------------------------------------------------------------------------------------------------------------------------Magazines
---Vintage Mag--
-self.parts.wpn_fps_upg_m4_m_straight.stats = {extra_ammo = -5, reload = 2, concealment = 1}
---Milspec Mag--
-self.parts.wpn_fps_m4_uupg_m_std.stats = {extra_ammo = 5, reload = -2, concealment = -1}
+--General CAR Mag--
+self.parts.wpn_fps_upg_m4_m_straight.stats = {extra_ammo = -5, reload = 2, concealment = 1} --Vintage Mag
+self.parts.wpn_fps_m4_uupg_m_std.stats = {extra_ammo = 5, reload = -2, concealment = -1} --Milspec Mag
+self.parts.wpn_fps_upg_m4_m_pmag.stats = {suppression = -1} -- Tactical Mag
+self.parts.wpn_fps_upg_m4_m_l5.stats = {} --L5 Magazine
+--Expert Mag--
+self.parts.wpn_fps_ass_l85a2_m_emag.stats = {}
 --Quadstacked Mag--
 self.parts.wpn_fps_upg_m4_m_quad.stats = {extra_ammo = 15, recoil = 1, reload = -5, concealment = -3} -- CAR
 self.parts.wpn_fps_upg_ak_m_quad.stats = {extra_ammo = 15, recoil = 1, reload = -5, concealment = -3} -- AK 
---Tactical Mag--
-self.parts.wpn_fps_upg_m4_m_pmag.stats = {suppression = -1} -- Tactical Mag
---L5 Magazine--
-self.parts.wpn_fps_upg_m4_m_l5.stats = {}
---Expert Mag--
-self.parts.wpn_fps_ass_l85a2_m_emag.stats = {}
 --Speed Pull Magazine--
 self.parts.wpn_fps_m4_upg_m_quick.stats = {reload = 5, concealment = -1} -- CAR
 self.parts.wpn_fps_upg_ak_m_quick.stats = {reload = 5, concealment = -1} -- AK
@@ -206,7 +203,7 @@ self.parts.wpn_fps_smg_p90_m_strap.stats = {reload = 5, concealment = -1} -- Kob
 --Low Drag Magazine--
 self.parts.wpn_fps_upg_ak_m_uspalm.stats = {}
 --Extended Mag--
-self.parts.wpn_fps_ass_fal_m_01.stats = {extra_ammo = 10, recoil = 1, reload = -5, concealment = -2} -- Falcon
+self.parts.wpn_fps_ass_fal_m_01.stats = {extra_ammo = 10, recoil = 1, reload = -2, concealment = -2} -- Falcon
 self.parts.wpn_fps_shot_r870_m_extended.stats = {extra_ammo_new = 1} -- Reinfield 880
 self.parts.wpn_fps_shot_r870_m_extended.forbids = {"wpn_fps_upg_ns_shot_thick", "wpn_fps_upg_ns_sho_salvo_large"}
 self.parts.wpn_fps_shot_shorty_m_extended_short.stats = {extra_ammo_new = 1} -- Locomotive
@@ -215,20 +212,33 @@ self.parts.wpn_fps_sho_b_spas12_long.type = "magazine" -- Predator
 self.parts.wpn_fps_sho_b_spas12_long.stats = {extra_ammo = 1}
 self.parts.wpn_fps_pis_g18c_m_mag_33rnd.stats = {reload = -2, concealment = -2} -- Chimano
 self.parts.wpn_fps_pis_g18c_m_mag_33rnd.override_weapon = {CLIP_AMMO_MAX = 33, AMMO_MAX = 132}
-self.parts.wpn_fps_pis_beretta_m_extended.stats = {concealment = -2, extra_ammo_new = 15} -- Bernetti
+self.parts.wpn_fps_pis_beretta_m_extended.stats = {concealment = -2, extra_ammo_new = 15, reload = -2} -- Bernetti
+self.parts.wpn_fps_pis_packrat_m_extended.stats = {concealment = -2, extra_ammo = 5, reload = -2} -- Contractor
+self.parts.wpn_fps_pis_hs2000_m_extended.stats = {concealment = -2, extra_ammo = 4, reload = -1} -- LEO
+self.parts.wpn_fps_pis_c96_m_extended.stats = {extra_ammo = 5, reload = -10} -- Broomstick
+self.parts.wpn_fps_pis_shrew_m_extended.stats = {extra_ammo = 2} -- Crosskill Guard
+self.parts.wpn_fps_pis_deagle_m_extended.stats = {concealment = -1, reload = -2, extra_ammo = 2} -- Deagle
+self.parts.wpn_fps_pis_p226_m_extended.stats = {concealment = -2, extra_ammo = 4, reload = -1} -- Signature .40
+self.parts.wpn_fps_pis_usp_m_extended.stats = {concealment = -2, extra_ammo = 4, reload = -1} -- Interceptor .45
+self.parts.wpn_fps_pis_lemming_m_ext.stats = {concealment = -2, extra_ammo = 5} -- 5/7 AP
 --12rnd Mag--
-self.parts.wpn_fps_pis_1911_m_extended.stats = {extra_ammo_new = 5, concealment = -1} 
+self.parts.wpn_fps_pis_1911_m_extended.stats = {extra_ammo_new = 5, concealment = -1, reload = -1} 
 --Magazine with Ameritude!--
-self.parts.wpn_fps_pis_1911_m_big.stats = {extra_ammo_new = 9, recoil = 1, concealment = -2}
+self.parts.wpn_fps_pis_1911_m_big.stats = {extra_ammo_new = 9, concealment = -2, reload = -2}
+--I want more Magazine!--
+self.parts.wpn_fps_pis_usp_m_big.stats = {concealment = -2, extra_ammo = 6, reload = -2}
 --Big Brother Magazine--
 self.parts.wpn_fps_sho_basset_m_extended.stats = {extra_ammo = 1, concealment = -1}
 ---------------------------------------------------------------------------------------------------------------------------------------------Magazines
----------------------------------------------------------------------------------------------------------------------------------------Upper Receivers
+---------------------------------------------------------------------------------------------------------------------------------------------Receivers
+--THRUST Lower Receiver--
+self.parts.wpn_fps_upg_ass_m4_lower_reciever_core.stats = {reload = 1}
+--Exotique Receiver--
+--LW Upper Receiver--
+--THRUST Upper Receiver--
 --Shell Rack--
 self.parts.wpn_fps_shot_r870_body_rack.stats = {concealment = -1, reload = 5}
---80's Calling--
-self.parts.wpn_fps_smg_cobray_body_upper_jacket.stats = {concealment = -1, suppression = -5}
----------------------------------------------------------------------------------------------------------------------------------------Upper Receivers
+---------------------------------------------------------------------------------------------------------------------------------------------Receivers
 ---------------------------------------------------------------------------------------------------------------------------------------------Foregrips
 --Aftermarket Special Handguard--
 self.parts.wpn_fps_m4_uupg_fg_lr300.override = {wpn_fps_ass_m16_os_frontsight = {a_obj = "a_os_new1", unit = "units/pd2_dlc_gage_shot/weapons/wpn_fps_upg_o_mbus/wpn_fps_upg_o_mbus_front"}}
@@ -236,6 +246,8 @@ self.parts.wpn_fps_m4_uupg_fg_lr300.override = {wpn_fps_ass_m16_os_frontsight = 
 self.parts.wpn_fps_upg_fg_jp.override = {wpn_fps_ass_m16_os_frontsight = {a_obj = "a_os_new", unit = "units/pd2_dlc_gage_shot/weapons/wpn_fps_upg_o_mbus/wpn_fps_upg_o_mbus_front"}}
 --Gazelle Rail--
 self.parts.wpn_fps_upg_fg_smr.override = {wpn_fps_ass_m16_os_frontsight = {a_obj = "a_os_new", unit = "units/pd2_dlc_gage_shot/weapons/wpn_fps_upg_o_mbus/wpn_fps_upg_o_mbus_front"}}
+self.parts.wpn_fps_upg_fg_smr.forbids = {"wpn_fps_m4_uupg_b_sd"}
+self.parts.wpn_fps_m4_uupg_b_sd.forbids = {"wpn_fps_upg_fg_smr"}
 --OVAL Foregrip--
 self.parts.wpn_fps_upg_ass_m4_fg_lvoa.forbids = {"wpn_fps_addon_ris"}
 self.parts.wpn_fps_upg_ass_m4_fg_lvoa.override = {wpn_fps_ass_m16_os_frontsight = {a_obj = "a_os_new", unit = "units/pd2_dlc_gage_shot/weapons/wpn_fps_upg_o_mbus/wpn_fps_upg_o_mbus_front"}}
@@ -243,7 +255,7 @@ self.parts.wpn_fps_upg_ass_m4_fg_lvoa.override = {wpn_fps_ass_m16_os_frontsight 
 self.parts.wpn_fps_upg_ass_m4_fg_moe.forbids = {"wpn_fps_addon_ris"}
 self.parts.wpn_fps_upg_ass_m4_fg_moe.override = {wpn_fps_ass_m16_os_frontsight = {a_obj = "a_os_new", unit = "units/pd2_dlc_gage_shot/weapons/wpn_fps_upg_o_mbus/wpn_fps_upg_o_mbus_front"}}
 ---------------------------------------------------------------------------------------------------------------------------------------------Foregrips
------------------------------------------------------------------------------------------------------------------------------------------------Weapons
+----------------------------------------------------------------------------------------------------------------------------------------Assault Rifles
 --AMCAR--
 self.wpn_fps_ass_amcar.adds = {
 	wpn_fps_upg_o_t1micro = {"wpn_fps_smg_sr2_o_rail"},
@@ -266,6 +278,7 @@ self.wpn_fps_ass_amcar.adds = {
 }
 self.parts.wpn_fps_amcar_uupg_body_upperreciever.type = "upper_reciever"
 self.parts.wpn_fps_amcar_uupg_body_upperreciever.forbids = {}
+self.parts.wpn_fps_amcar_uupg_fg_amcar.forbids = {"wpn_fps_addon_ris"}
 self.parts.wpn_fps_upg_o_acog.stance_mod.wpn_fps_ass_amcar = {translation = Vector3(0, 0, -4.158)}
 self.parts.wpn_fps_upg_o_t1micro.stance_mod.wpn_fps_ass_amcar = {translation = Vector3(0, 0, -4.158)}
 self.parts.wpn_fps_upg_o_docter.stance_mod.wpn_fps_ass_amcar = {translation = Vector3(0, 0, -4.158)}
@@ -312,6 +325,33 @@ table.insert(self.wpn_fps_ass_amcar.uses_parts, "wpn_fps_upg_ass_m4_fg_lvoa")
 table.insert(self.wpn_fps_ass_amcar.uses_parts, "wpn_fps_upg_ass_m4_fg_moe")
 table.insert(self.wpn_fps_ass_amcar.uses_parts, "wpn_fps_upg_m4_s_pts")
 table.insert(self.wpn_fps_ass_amcar.uses_parts, "wpn_fps_m4_uupg_s_fold")
+table.insert(self.wpn_fps_ass_amcar.uses_parts, "wpn_fps_upg_ass_m4_lower_reciever_core")
+--AMR-16--
+self.wpn_fps_ass_m16.override = {
+	wpn_fps_upg_m4_m_pmag = {stats = {extra_ammo = 5, reload = -2, suppression = -1, concealment = -1}},
+	wpn_fps_upg_m4_m_l5 = {stats = {extra_ammo = 5, reload = -2, concealment = -1}},
+	wpn_fps_ass_l85a2_m_emag = {stats = {extra_ammo = 5, reload = -2, concealment = -1}},
+	wpn_fps_m4_upg_m_quick = {stats = {extra_ammo = 5, reload = 3, concealment = -2}},
+	wpn_fps_upg_m4_m_quad = {stats = {extra_ammo = 20, recoil = 1, reload = -7, concealment = -4}}
+}
+--Little Friend 7.62--
+self.wpn_fps_ass_contraband.stock_adapter = "wpn_fps_upg_m4_s_adapter"
+table.insert(self.wpn_fps_ass_contraband.uses_parts, "wpn_fps_ass_tecci_ns_special")
+table.insert(self.wpn_fps_ass_contraband.uses_parts, "wpn_fps_upg_m4_s_mk46")
+table.insert(self.wpn_fps_ass_contraband.uses_parts, "wpn_fps_upg_m4_s_ubr")
+table.insert(self.wpn_fps_ass_contraband.uses_parts, "wpn_fps_upg_m4_s_crane")
+table.insert(self.wpn_fps_ass_contraband.uses_parts, "wpn_fps_upg_m4_s_standard")
+table.insert(self.wpn_fps_ass_contraband.uses_parts, "wpn_fps_upg_m4_s_pts")	
+table.insert(self.wpn_fps_ass_contraband.uses_parts, "wpn_fps_upg_m4_g_mgrip")
+table.insert(self.wpn_fps_ass_contraband.uses_parts, "wpn_fps_m4_uupg_s_fold")           
+table.insert(self.wpn_fps_ass_contraband.uses_parts, "wpn_fps_upg_m4_g_ergo")
+table.insert(self.wpn_fps_ass_contraband.uses_parts, "wpn_fps_upg_m4_g_sniper")
+table.insert(self.wpn_fps_ass_contraband.uses_parts, "wpn_fps_upg_m4_g_mgrip")     
+table.insert(self.wpn_fps_ass_contraband.uses_parts, "wpn_fps_upg_m4_g_hgrip")
+table.insert(self.wpn_fps_ass_contraband.uses_parts, "wpn_fps_snp_tti_s_vltor")     
+table.insert(self.wpn_fps_ass_contraband.uses_parts, "wpn_fps_snp_tti_g_grippy")
+----------------------------------------------------------------------------------------------------------------------------------------Assault Rifles
+----------------------------------------------------------------------------------------------------------------------------------------------Shotguns
 --Joceline O/U 12G--
 self.wpn_fps_shot_b682.override= {
 	wpn_fps_upg_o_t1micro = {stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(0, -23, -4.4),rotation = Rotation(0, 0, 0)}}},
@@ -493,18 +533,8 @@ table.insert(self.wpn_fps_shot_huntsman.uses_parts, "wpn_fps_upg_o_45rds_v2")
 table.insert(self.wpn_fps_shot_huntsman.uses_parts, "wpn_fps_upg_o_45rds")
 table.insert(self.wpn_fps_shot_huntsman.uses_parts, "wpn_fps_upg_o_45steel")
 --Breaker 12G--
-self.wpn_fps_sho_boot.override = {wpn_fps_shot_r870_body_rack = {
-		a_obj ="a_body_custom",
-		forbids = {
-				"wpn_fps_upg_fl_ass_smg_sho_surefire",
-				"wpn_fps_upg_fl_ass_smg_sho_peqbox",
-				"wpn_fps_upg_fl_ass_laser",
-				"wpn_fps_upg_fl_ass_peq15",
-				"wpn_fps_upg_fl_ass_utg"
-			}
-	}
-}
-table.insert(self.wpn_fps_sho_boot.uses_parts, "wpn_fps_shot_r870_body_rack")
+self.parts.wpn_fps_sho_boot_b_long.stats = {extra_ammo_new = 1, recoil = 1, spread = 1, concealment = -3}
+self.parts.wpn_fps_sho_boot_b_short.stats = {extra_ammo_new = -1, recoil = -1, spread = -1, concealment = 3}
 --M1014--
 self.wpn_fps_sho_ben.override = {wpn_fps_shot_r870_body_rack = {a_obj ="a_body_custom"}}
 table.insert(self.wpn_fps_sho_ben.uses_parts, "wpn_fps_shot_r870_body_rack")
@@ -515,8 +545,6 @@ table.insert(self.wpn_fps_sho_ksg.uses_parts, "wpn_fps_shot_r870_body_rack")
 --Predator 12G--
 self.wpn_fps_sho_spas12.override = {wpn_fps_shot_r870_body_rack = {a_obj ="a_body_custom"}}
 table.insert(self.wpn_fps_sho_spas12.uses_parts, "wpn_fps_shot_r870_body_rack")
---Contractor .308--
-table.insert(self.wpn_fps_snp_tti.uses_parts, "wpn_fps_upg_o_mbus_rear")
 --Claire 12G--
 self.wpn_fps_sho_coach.override= {
 	wpn_fps_upg_o_t1micro = {stance_mod = {wpn_fps_sho_coach = {translation = Vector3(0, -3, -3),rotation = Rotation(0, 0, 0)}}},
@@ -575,15 +603,85 @@ table.insert(self.wpn_fps_sho_coach.uses_parts, "wpn_fps_upg_fl_pis_m3x")
 table.insert(self.wpn_fps_sho_coach.uses_parts, "wpn_fps_upg_fl_pis_crimson")
 table.insert(self.wpn_fps_sho_coach.uses_parts, "wpn_fps_upg_fl_pis_laser")
 table.insert(self.wpn_fps_sho_coach.uses_parts, "wpn_fps_upg_fl_pis_tlr1")
-
+----------------------------------------------------------------------------------------------------------------------------------------------Shotguns
+-----------------------------------------------------------------------------------------------------------------------------------------Sniper Rifles
+--Contractor .308--
+table.insert(self.wpn_fps_snp_tti.uses_parts, "wpn_fps_upg_o_mbus_rear")
+-----------------------------------------------------------------------------------------------------------------------------------------Sniper Rifles
+-----------------------------------------------------------------------------------------------------------------------------------------------Pistols
+--Bernetti 9--
 self.wpn_fps_pis_beretta.override.wpn_fps_pis_beer_b_robo = {a_obj = "a_b_custom"}
 table.insert(self.wpn_fps_pis_beretta.uses_parts, "wpn_fps_pis_beer_b_robo")
-self.wpn_fps_ass_m16.override.wpn_fps_upg_m4_m_pmag = {stats = {extra_ammo = 5, concealment = -1}} -- AMR16 Tactical Mag
-self.wpn_fps_ass_m16.override.wpn_fps_upg_m4_m_l5 = {stats = {extra_ammo = 5, concealment = -1}} -- AMR16 L5 Mag
-self.wpn_fps_ass_m16.override.wpn_fps_ass_l85a2_m_emag = {stats = {extra_ammo = 5, concealment = -1}} --AMR16 Expert Mag
-self.wpn_fps_ass_m16.override.wpn_fps_m4_upg_m_quick = {stats = {extra_ammo = 5, concealment = -2}} -- AMR16 Speedpull
-self.wpn_fps_ass_m16.override.wpn_fps_upg_m4_m_quad = {stats = {extra_ammo = 20, concealment = -2}} -- AMR16 Quadstacked Mag
-self.wpn_fps_smg_olympic.override.wpn_fps_upg_m4_m_quad = {stats = {extra_ammo = 20, concealment = -2}} -- Para Quadstacked Mag
------------------------------------------------------------------------------------------------------------------------------------------------Weapons
-
+--Castigo .44--
+self.wpn_fps_pis_chinchilla.override = {
+	wpn_fps_pis_c96_sight = {stance_mod = {wpn_fps_pis_chinchilla = {translation = Vector3(0, -15, -3.204),rotation = Rotation(0, 0, 0)}}},
+	wpn_fps_upg_o_bmg = {stance_mod = {wpn_fps_pis_chinchilla = {translation = Vector3(0, -10, -4),rotation = Rotation(0, 0, 0)}}},
+	wpn_fps_upg_o_acog = {stance_mod = {wpn_fps_pis_chinchilla = {translation = Vector3(0, -10, -4),rotation = Rotation(0, 0, 0)}}},
+	wpn_fps_upg_o_specter = {stance_mod = {wpn_fps_pis_chinchilla = {translation = Vector3(0, -10, -4),rotation = Rotation(0, 0, 0)}}},
+	wpn_fps_upg_o_aimpoint = {stance_mod = {wpn_fps_pis_chinchilla = {translation = Vector3(0, -10, -4),rotation = Rotation(0, 0, 0)}}},
+	wpn_fps_upg_o_aimpoint_2 = {stance_mod = {wpn_fps_pis_chinchilla = {translation = Vector3(0, -10, -4),rotation = Rotation(0, 0, 0)}}},
+	wpn_fps_upg_o_spot = {stance_mod = {wpn_fps_pis_chinchilla = {translation = Vector3(0, -10, -4),rotation = Rotation(0, 0, 0)}}},
+	wpn_fps_upg_o_t1micro = {stance_mod = {wpn_fps_pis_chinchilla = {translation = Vector3(0, -5, -3.6),rotation = Rotation(0, 0, 0)}}},
+	wpn_fps_upg_o_docter = {stance_mod = {wpn_fps_pis_chinchilla = {translation = Vector3(0, -5, -3.6),rotation = Rotation(0, 0, 0)}}},
+	wpn_fps_upg_o_cmore = {stance_mod = {wpn_fps_pis_chinchilla = {translation = Vector3(0, -5, -3.9),rotation = Rotation(0, 0, 0)}}},
+	wpn_fps_upg_o_cs = {stance_mod = {wpn_fps_pis_chinchilla = {translation = Vector3(0, -5, -3.6),rotation = Rotation(0, 0, 0)}}},
+	wpn_fps_upg_o_reflex = {stance_mod = {wpn_fps_pis_chinchilla = {translation = Vector3(0, -5, -3.8),rotation = Rotation(0, 0, 0)}}},
+	wpn_fps_upg_o_rx01 = {stance_mod = {wpn_fps_pis_chinchilla = {translation = Vector3(0, -5, -3.8),rotation = Rotation(0, 0, 0)}}},
+	wpn_fps_upg_o_eotech = {stance_mod = {wpn_fps_pis_chinchilla = {translation = Vector3(0, -5, -3.6),rotation = Rotation(0, 0, 0)}}},
+	wpn_fps_upg_o_eotech_xps = {stance_mod = {wpn_fps_pis_chinchilla = {translation = Vector3(0, -5, -3.8),rotation = Rotation(0, 0, 0)}}},
+	wpn_fps_upg_o_rx30 = {stance_mod = {wpn_fps_pis_chinchilla = {translation = Vector3(0, -5, -3.8),rotation = Rotation(0, 0, 0)}}},
+	wpn_fps_upg_o_uh = {stance_mod = {wpn_fps_pis_chinchilla = {translation = Vector3(0, -5, -3.9),rotation = Rotation(0, 0, 0)}}},
+	wpn_fps_upg_o_fc1 = {stance_mod = {wpn_fps_pis_chinchilla = {translation = Vector3(0, -5, -3.9),rotation = Rotation(0, 0, 0)}}}
+}
+self.wpn_fps_pis_chinchilla.adds = {
+	wpn_fps_pis_c96_sight = {"wpn_fps_smg_sr2_o_rail"},
+	wpn_fps_upg_o_bmg = {"wpn_fps_smg_sr2_o_rail"},
+	wpn_fps_upg_o_acog = {"wpn_fps_smg_sr2_o_rail"},
+	wpn_fps_upg_o_t1micro = {"wpn_fps_smg_sr2_o_rail"},
+	wpn_fps_upg_o_docter = {"wpn_fps_smg_sr2_o_rail"},
+	wpn_fps_upg_o_cmore = {"wpn_fps_smg_sr2_o_rail"},
+	wpn_fps_upg_o_cs = {"wpn_fps_smg_sr2_o_rail"},
+	wpn_fps_upg_o_reflex = {"wpn_fps_smg_sr2_o_rail"},
+	wpn_fps_upg_o_rx01 = {"wpn_fps_smg_sr2_o_rail"},
+	wpn_fps_upg_o_eotech = {"wpn_fps_smg_sr2_o_rail"},
+	wpn_fps_upg_o_eotech_xps = {"wpn_fps_smg_sr2_o_rail"},
+	wpn_fps_upg_o_rx30 = {"wpn_fps_smg_sr2_o_rail"},
+	wpn_fps_upg_o_aimpoint_2 = {"wpn_fps_smg_sr2_o_rail"},
+	wpn_fps_upg_o_aimpoint = {"wpn_fps_smg_sr2_o_rail"},
+	wpn_fps_upg_o_specter = {"wpn_fps_smg_sr2_o_rail"},
+	wpn_fps_upg_o_spot = {"wpn_fps_smg_sr2_o_rail"},
+	wpn_fps_upg_o_fc1 = {"wpn_fps_smg_sr2_o_rail"},
+	wpn_fps_upg_o_uh = {"wpn_fps_smg_sr2_o_rail"}
+}
+table.insert(self.wpn_fps_pis_chinchilla.uses_parts,"wpn_fps_upg_o_t1micro")
+table.insert(self.wpn_fps_pis_chinchilla.uses_parts,"wpn_fps_upg_o_docter")
+table.insert(self.wpn_fps_pis_chinchilla.uses_parts,"wpn_fps_upg_o_cmore")
+table.insert(self.wpn_fps_pis_chinchilla.uses_parts,"wpn_fps_upg_o_cs")
+table.insert(self.wpn_fps_pis_chinchilla.uses_parts,"wpn_fps_upg_o_reflex")
+table.insert(self.wpn_fps_pis_chinchilla.uses_parts,"wpn_fps_upg_o_rx01")
+table.insert(self.wpn_fps_pis_chinchilla.uses_parts,"wpn_fps_upg_o_eotech")
+table.insert(self.wpn_fps_pis_chinchilla.uses_parts,"wpn_fps_upg_o_eotech_xps")
+table.insert(self.wpn_fps_pis_chinchilla.uses_parts,"wpn_fps_upg_o_rx30")
+table.insert(self.wpn_fps_pis_chinchilla.uses_parts,"wpn_fps_upg_o_aimpoint_2")
+table.insert(self.wpn_fps_pis_chinchilla.uses_parts,"wpn_fps_upg_o_aimpoint")
+table.insert(self.wpn_fps_pis_chinchilla.uses_parts,"wpn_fps_upg_o_specter")
+table.insert(self.wpn_fps_pis_chinchilla.uses_parts,"wpn_fps_upg_o_spot")
+table.insert(self.wpn_fps_pis_chinchilla.uses_parts,"wpn_fps_upg_o_fc1")
+table.insert(self.wpn_fps_pis_chinchilla.uses_parts,"wpn_fps_upg_o_uh")
+table.insert(self.wpn_fps_pis_chinchilla.uses_parts,"wpn_fps_pis_c96_sight")
+table.insert(self.wpn_fps_pis_chinchilla.uses_parts,"wpn_fps_upg_o_acog")
+table.insert(self.wpn_fps_pis_chinchilla.uses_parts,"wpn_fps_upg_o_bmg")
+-----------------------------------------------------------------------------------------------------------------------------------------------Pistols
+---------------------------------------------------------------------------------------------------------------------------------------------------SMG
+--Para--
+self.wpn_fps_smg_olympic.override = {
+	wpn_fps_upg_m4_m_pmag = {stats = {extra_ammo = 5, reload = -2, suppression = -1, concealment = -1}},
+	wpn_fps_upg_m4_m_l5 = {stats = {extra_ammo = 5, reload = -2, concealment = -1}},
+	wpn_fps_ass_l85a2_m_emag = {stats = {extra_ammo = 5, reload = -2, concealment = -1}},
+	wpn_fps_m4_upg_m_quick = {stats = {extra_ammo = 5, reload = 3, concealment = -2}},
+	wpn_fps_upg_m4_m_quad = {stats = {extra_ammo = 20, recoil = 1, reload = -7, concealment = -4}}
+}
+--Jacket's Piece--
+self.parts.wpn_fps_smg_cobray_body_upper_jacket.stats = {concealment = -1, suppression = -5}
+---------------------------------------------------------------------------------------------------------------------------------------------------SMG
 end )

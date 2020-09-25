@@ -138,11 +138,6 @@ self:SetupAttachmentPoint( "huntsman", {
 	position = Vector3( 0, 34, 0 )
 })
 --Breaker 12G--
-self:SetupAttachmentPoint( "boot", {
-	name = "a_body_custom",
-	base_a_obj = "a_body",
-	position = Vector3( 0.1, 33, 3.6 ), rotation = RotationCAP(0.4, 0, -180)
-})
 self.boot.CLIP_AMMO_MAX = 5 -- magazine size.
 self.boot.AMMO_MAX = 20 -- total ammo.
 --M1014--
@@ -235,6 +230,11 @@ self.b92fs.AMMO_MAX = 150 -- total ammo.
 self.pl14.CLIP_AMMO_MAX = 15 -- magazine size.
 --Parabellum--
 --Castigo .44--
+self:SetupAttachmentPoint( "chinchilla", {
+	name = "a_o",
+	base_a_obj = "a_body",
+	position = Vector3( 0.7, 8, 6.35 )}
+)
 --Crosskill Guard--
 self.shrew.CLIP_AMMO_MAX = 7 -- magazine size.
 self.shrew.AMMO_MAX = 70 -- total ammo.
