@@ -136,6 +136,10 @@ self.parts.wpn_fps_pis_c96_sight.stats = {
 	zoom = 7,
 	concealment = -2
 }
+self.parts.wpn_fps_pis_c96_sight.forbids = {
+	"wpn_fps_upg_o_xpsg33_magnifier",
+	"wpn_fps_upg_o_sig"
+}
 --Pistol Red Dot Sight--
 self.parts.wpn_fps_upg_o_rmr.stats = {}
 --SKOLD Micro Reflex Sight--
@@ -169,7 +173,8 @@ self.parts.wpn_fps_upg_o_xpsg33_magnifier.forbids = {
 	"wpn_fps_upg_o_rx30",
 	"wpn_fps_upg_o_eotech",
 	"wpn_fps_upg_o_cmore",
-	"wpn_fps_upg_o_uh"
+	"wpn_fps_upg_o_uh",
+	"wpn_fps_pis_c96_sight"
 }
 --Signature Magnifier Gadget--
 self.parts.wpn_fps_upg_o_sig.stats = {gadget_zoom = 9, concealment = -2}
@@ -178,7 +183,8 @@ self.parts.wpn_fps_upg_o_sig.forbids = {
 	"wpn_fps_upg_o_rx30",
 	"wpn_fps_upg_o_eotech",
 	"wpn_fps_upg_o_cmore",
-	"wpn_fps_upg_o_uh"
+	"wpn_fps_upg_o_uh",
+	"wpn_fps_pis_c96_sight"
 }
 -----------------------------------------------------------------------------------------------------------------------------------------------Gadgets
 ---------------------------------------------------------------------------------------------------------------------------------------------Magazines
@@ -215,7 +221,7 @@ self.parts.wpn_fps_pis_g18c_m_mag_33rnd.override_weapon = {CLIP_AMMO_MAX = 33, A
 self.parts.wpn_fps_pis_beretta_m_extended.stats = {concealment = -2, extra_ammo_new = 15, reload = -2} -- Bernetti
 self.parts.wpn_fps_pis_packrat_m_extended.stats = {concealment = -2, extra_ammo = 5, reload = -2} -- Contractor
 self.parts.wpn_fps_pis_hs2000_m_extended.stats = {concealment = -2, extra_ammo = 4, reload = -1} -- LEO
-self.parts.wpn_fps_pis_c96_m_extended.stats = {extra_ammo = 5, reload = -10} -- Broomstick
+self.parts.wpn_fps_pis_c96_m_extended.stats = {extra_ammo = 5, reload = -5} -- Broomstick
 self.parts.wpn_fps_pis_shrew_m_extended.stats = {extra_ammo = 2} -- Crosskill Guard
 self.parts.wpn_fps_pis_deagle_m_extended.stats = {concealment = -1, reload = -2, extra_ammo = 2} -- Deagle
 self.parts.wpn_fps_pis_p226_m_extended.stats = {concealment = -2, extra_ammo = 4, reload = -1} -- Signature .40
@@ -311,12 +317,14 @@ self.parts.wpn_fps_upg_o_45steel.stance_mod.wpn_fps_ass_amcar = {
 	rotation = Rotation(0, 0, -45)
 }
 self.wpn_fps_ass_amcar.override = {
+	wpn_fps_ass_l85a2_m_emag = {stats = {extra_ammo = 5, reload = -2, concealment = -1}},
 	wpn_fps_upg_m4_m_pmag = {stats = {extra_ammo = 5, reload = -2, suppression = -1, concealment = -1}},
 	wpn_fps_upg_m4_m_l5 = {stats = {extra_ammo = 5, reload = -2, concealment = -1}},
 	wpn_fps_ass_l85a2_m_emag = {stats = {extra_ammo = 5, reload = -2, concealment = -1}},
-	wpn_fps_m4_upg_m_quick = {stats = {extra_ammo = 5, reload = 3, concealment = -2}},
-	wpn_fps_upg_m4_m_quad = {stats = {extra_ammo = 20, recoil = 1, reload = -7, concealment = -4}}
+	wpn_fps_m4_upg_m_quick = {stats = {extra_ammo = 5, concealment = -2}},
+	wpn_fps_upg_m4_m_quad = {stats = {extra_ammo = 20, recoil = 1, reload = -5, concealment = -4}}
 }
+table.insert(self.wpn_fps_ass_amcar.uses_parts, "wpn_fps_ass_l85a2_m_emag")
 table.insert(self.wpn_fps_ass_amcar.uses_parts, "wpn_fps_m4_uupg_b_long")
 table.insert(self.wpn_fps_ass_amcar.uses_parts, "wpn_fps_m4_uupg_fg_lr300")
 table.insert(self.wpn_fps_ass_amcar.uses_parts, "wpn_fps_upg_fg_jp")
@@ -331,9 +339,18 @@ self.wpn_fps_ass_m16.override = {
 	wpn_fps_upg_m4_m_pmag = {stats = {extra_ammo = 5, reload = -2, suppression = -1, concealment = -1}},
 	wpn_fps_upg_m4_m_l5 = {stats = {extra_ammo = 5, reload = -2, concealment = -1}},
 	wpn_fps_ass_l85a2_m_emag = {stats = {extra_ammo = 5, reload = -2, concealment = -1}},
-	wpn_fps_m4_upg_m_quick = {stats = {extra_ammo = 5, reload = 3, concealment = -2}},
-	wpn_fps_upg_m4_m_quad = {stats = {extra_ammo = 20, recoil = 1, reload = -7, concealment = -4}}
+	wpn_fps_m4_upg_m_quick = {stats = {extra_ammo = 5, concealment = -2}},
+	wpn_fps_upg_m4_m_quad = {stats = {extra_ammo = 20, recoil = 1, reload = -5, concealment = -4}}
 }
+--Bootleg--
+self.wpn_fps_ass_tecci.override = {
+	wpn_fps_smg_schakal_vg_surefire = {requires = {"wpn_fps_m16_fg_railed"}, a_obj= "a_vg_new"},
+	wpn_fps_m4_uupg_b_long = {unit = "units/pd2_dlc_chico/weapons/wpn_fps_ass_contraband_pts/wpn_fps_ass_contraband_b_standard"},
+	wpn_fps_m16_fg_railed = {requires = {"wpn_fps_m4_uupg_b_long", "wpn_fps_ass_tecci_b_long"}, unit = "units/pd2_dlc_chico/weapons/wpn_fps_ass_contraband_pts/wpn_fps_ass_contraband_fg_standard"}
+}
+table.insert(self.wpn_fps_ass_tecci.uses_parts, "wpn_fps_m4_uupg_b_long")
+table.insert(self.wpn_fps_ass_tecci.uses_parts, "wpn_fps_m16_fg_railed")
+table.insert(self.wpn_fps_ass_tecci.uses_parts, "wpn_fps_smg_schakal_vg_surefire")
 --Little Friend 7.62--
 self.wpn_fps_ass_contraband.stock_adapter = "wpn_fps_upg_m4_s_adapter"
 table.insert(self.wpn_fps_ass_contraband.uses_parts, "wpn_fps_ass_tecci_ns_special")
@@ -341,38 +358,59 @@ table.insert(self.wpn_fps_ass_contraband.uses_parts, "wpn_fps_upg_m4_s_mk46")
 table.insert(self.wpn_fps_ass_contraband.uses_parts, "wpn_fps_upg_m4_s_ubr")
 table.insert(self.wpn_fps_ass_contraband.uses_parts, "wpn_fps_upg_m4_s_crane")
 table.insert(self.wpn_fps_ass_contraband.uses_parts, "wpn_fps_upg_m4_s_standard")
-table.insert(self.wpn_fps_ass_contraband.uses_parts, "wpn_fps_upg_m4_s_pts")	
+table.insert(self.wpn_fps_ass_contraband.uses_parts, "wpn_fps_upg_m4_s_pts")
 table.insert(self.wpn_fps_ass_contraband.uses_parts, "wpn_fps_upg_m4_g_mgrip")
-table.insert(self.wpn_fps_ass_contraband.uses_parts, "wpn_fps_m4_uupg_s_fold")           
+table.insert(self.wpn_fps_ass_contraband.uses_parts, "wpn_fps_m4_uupg_s_fold")
 table.insert(self.wpn_fps_ass_contraband.uses_parts, "wpn_fps_upg_m4_g_ergo")
 table.insert(self.wpn_fps_ass_contraband.uses_parts, "wpn_fps_upg_m4_g_sniper")
-table.insert(self.wpn_fps_ass_contraband.uses_parts, "wpn_fps_upg_m4_g_mgrip")     
+table.insert(self.wpn_fps_ass_contraband.uses_parts, "wpn_fps_upg_m4_g_mgrip")
 table.insert(self.wpn_fps_ass_contraband.uses_parts, "wpn_fps_upg_m4_g_hgrip")
-table.insert(self.wpn_fps_ass_contraband.uses_parts, "wpn_fps_snp_tti_s_vltor")     
+table.insert(self.wpn_fps_ass_contraband.uses_parts, "wpn_fps_snp_tti_s_vltor")
 table.insert(self.wpn_fps_ass_contraband.uses_parts, "wpn_fps_snp_tti_g_grippy")
+table.insert(self.wpn_fps_ass_contraband.uses_parts, "wpn_fps_ass_tecci_b_long")
+--Galant--
+self.wpn_fps_ass_ching.override = {
+
+}
+self.parts.wpn_fps_ass_ching_fg_standard.override = {
+	wpn_fps_pis_c96_rail = {a_obj = "a_o_mount"},
+	wpn_fps_pis_c96_sight = {
+		a_obj = "a_o_side",
+		stance_mod ={wpn_fps_ass_ching = {translation = Vector3(4, -5, -1)}},
+		forbids = {
+			"wpn_fps_upg_o_45rds_v2",
+			"wpn_fps_upg_o_45rds",
+			"wpn_fps_upg_o_45steel",
+			"wpn_fps_upg_o_xpsg33_magnifier",
+			"wpn_fps_upg_o_sig"
+		}
+	}
+}
+self.wpn_fps_ass_ching.adds.wpn_fps_pis_c96_sight = {"wpn_fps_pis_c96_rail"}
+table.insert(self.wpn_fps_ass_ching.uses_parts, "wpn_fps_pis_c96_sight")
 ----------------------------------------------------------------------------------------------------------------------------------------Assault Rifles
 ----------------------------------------------------------------------------------------------------------------------------------------------Shotguns
 --Joceline O/U 12G--
 self.wpn_fps_shot_b682.override= {
-	wpn_fps_upg_o_t1micro = {stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(0, -23, -4.4),rotation = Rotation(0, 0, 0)}}},
-	wpn_fps_upg_o_docter = {stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(0, -23, -4.4),rotation = Rotation(0, 0, 0)}}},
-	wpn_fps_upg_o_cmore = {stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(0, -23, -4.4),rotation = Rotation(0, 0, 0)}}},
-	wpn_fps_upg_o_cs = {stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(0, -23, -4.4),rotation = Rotation(0, 0, 0)}}},
-	wpn_fps_upg_o_reflex = {stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(0, -23, -4.4),rotation = Rotation(0, 0, 0)}}},
-	wpn_fps_upg_o_rx01 = {stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(0, -23, -4.4),rotation = Rotation(0, 0, 0)}}},
-	wpn_fps_upg_o_eotech = {stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(0, -23, -4.4),rotation = Rotation(0, 0, 0)}}},
-	wpn_fps_upg_o_eotech_xps = {stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(0, -23, -4.4),rotation = Rotation(0, 0, 0)}}},
-	wpn_fps_upg_o_rx30 = {stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(0, -23, -4.4),rotation = Rotation(0, 0, 0)}}},
-	wpn_fps_upg_o_aimpoint = {stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(0, -23, -4.4),rotation = Rotation(0, 0, 0)}}},
-	wpn_fps_upg_o_aimpoint_2 = {stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(0, -23, -4.4),rotation = Rotation(0, 0, 0)}}},
-	wpn_fps_upg_o_specter = {stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(0, -23, -4.4),rotation = Rotation(0, 0, 0)}}},
-	wpn_fps_upg_o_acog = {stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(0, -23, -4.4),rotation = Rotation(0, 0, 0)}}},
-	wpn_fps_upg_o_spot = {stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(0, -23, -4.4),rotation = Rotation(0, 0, 0)}}},
-	wpn_fps_upg_o_uh = {stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(0, -23, -4.4),rotation = Rotation(0, 0, 0)}}},
-	wpn_fps_upg_o_bmg = {stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(0, -23, -4.4),rotation = Rotation(0, 0, 0)}}},
-	wpn_fps_upg_o_fc1 = {stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(0, -23, -4.4),rotation = Rotation(0, 0, 0)}}},
-	wpn_fps_upg_o_sig = {stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(0, -23, -4.4),rotation = Rotation(0, 0, 0)}}},
-	wpn_fps_upg_o_xpsg33_magnifier = {stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(0, -23, -4.4),rotation = Rotation(0, 0, 0)}}},
+	wpn_fps_upg_o_t1micro = {stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(0, -23, -4.4)}}},
+	wpn_fps_upg_o_docter = {stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(0, -23, -4.4)}}},
+	wpn_fps_upg_o_cmore = {stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(0, -23, -4.4)}}},
+	wpn_fps_upg_o_cs = {stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(0, -23, -4.4)}}},
+	wpn_fps_upg_o_reflex = {stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(0, -23, -4.4)}}},
+	wpn_fps_upg_o_rx01 = {stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(0, -23, -4.4)}}},
+	wpn_fps_upg_o_eotech = {stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(0, -23, -4.4)}}},
+	wpn_fps_upg_o_eotech_xps = {stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(0, -23, -4.4)}}},
+	wpn_fps_upg_o_rx30 = {stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(0, -23, -4.4)}}},
+	wpn_fps_upg_o_aimpoint = {stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(0, -23, -4.4)}}},
+	wpn_fps_upg_o_aimpoint_2 = {stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(0, -23, -4.4)}}},
+	wpn_fps_upg_o_specter = {stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(0, -23, -4.4)}}},
+	wpn_fps_upg_o_acog = {stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(0, -23, -4.4)}}},
+	wpn_fps_upg_o_spot = {stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(0, -23, -4.4)}}},
+	wpn_fps_upg_o_uh = {stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(0, -23, -4.4)}}},
+	wpn_fps_upg_o_bmg = {stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(0, -23, -4.4)}}},
+	wpn_fps_upg_o_fc1 = {stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(0, -23, -4.4)}}},
+	wpn_fps_upg_o_sig = {stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(0, -23, -4.4)}}},
+	wpn_fps_upg_o_xpsg33_magnifier = {stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(0, -23, -4.4)}}},
 	wpn_fps_upg_o_45rds = {stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(-3.55, -23, -13.65),rotation = Rotation(0, 0, -45)}}},
 	wpn_fps_upg_o_45rds_v2 = {stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(-3.55, -23, -13.65),rotation = Rotation(0, 0, -45)}}},
 	wpn_fps_upg_o_45steel = {stance_mod = {wpn_fps_shot_b682 = {translation = Vector3(-3.55, -23, -13.65),rotation = Rotation(0, 0, -45)}}},
@@ -427,28 +465,28 @@ table.insert(self.wpn_fps_shot_b682.uses_parts, "wpn_fps_upg_o_fc1")
 table.insert(self.wpn_fps_shot_b682.uses_parts, "wpn_fps_upg_o_uh")
 --Mosconi 12G--
 self.wpn_fps_shot_huntsman.override= {
-	wpn_fps_upg_o_t1micro = {stance_mod = {wpn_fps_shot_huntsman = {translation = Vector3(0, -3, -3),rotation = Rotation(0, 0, 0)}}},
-	wpn_fps_upg_o_docter = {stance_mod = {wpn_fps_shot_huntsman = {translation = Vector3(0, -3, -3),rotation = Rotation(0, 0, 0)}}},
-	wpn_fps_upg_o_cmore = {stance_mod = {wpn_fps_shot_huntsman = {translation = Vector3(0, -3, -3),rotation = Rotation(0, 0, 0)}}},
-	wpn_fps_upg_o_cs = {stance_mod = {wpn_fps_shot_huntsman = {translation = Vector3(0, -3, -3),rotation = Rotation(0, 0, 0)}}},
-	wpn_fps_upg_o_reflex = {stance_mod = {wpn_fps_shot_huntsman = {translation = Vector3(0, -3, -3),rotation = Rotation(0, 0, 0)}}},
-	wpn_fps_upg_o_rx01 = {stance_mod = {wpn_fps_shot_huntsman = {translation = Vector3(0, -3, -3),rotation = Rotation(0, 0, 0)}}},
-	wpn_fps_upg_o_eotech = {stance_mod = {wpn_fps_shot_huntsman = {translation = Vector3(0, -3, -3),rotation = Rotation(0, 0, 0)}}},
-	wpn_fps_upg_o_eotech_xps = {stance_mod = {wpn_fps_shot_huntsman = {translation = Vector3(0, -3, -3),rotation = Rotation(0, 0, 0)}}},
-	wpn_fps_upg_o_rx30 = {stance_mod = {wpn_fps_shot_huntsman = {translation = Vector3(0, -3, -3),rotation = Rotation(0, 0, 0)}}},
-	wpn_fps_upg_o_aimpoint = {stance_mod = {wpn_fps_shot_huntsman = {translation = Vector3(0, -3, -3),rotation = Rotation(0, 0, 0)}}},
-	wpn_fps_upg_o_aimpoint_2 = {stance_mod = {wpn_fps_shot_huntsman = {translation = Vector3(0, -3, -3),rotation = Rotation(0, 0, 0)}}},
-	wpn_fps_upg_o_specter = {stance_mod = {wpn_fps_shot_huntsman = {translation = Vector3(0, -3, -3),rotation = Rotation(0, 0, 0)}}},
-	wpn_fps_upg_o_acog = {stance_mod = {wpn_fps_shot_huntsman = {translation = Vector3(0, -3, -3),rotation = Rotation(0, 0, 0)}}},
-	wpn_fps_upg_o_spot = {stance_mod = {wpn_fps_shot_huntsman = {translation = Vector3(0, -3, -3),rotation = Rotation(0, 0, 0)}}},
-	wpn_fps_upg_o_uh = {stance_mod = {wpn_fps_shot_huntsman = {translation = Vector3(0, -3, -3),rotation = Rotation(0, 0, 0)}}},
-	wpn_fps_upg_o_bmg = {stance_mod = {wpn_fps_shot_huntsman = {translation = Vector3(0, -3, -3),rotation = Rotation(0, 0, 0)}}},
-	wpn_fps_upg_o_fc1 = {stance_mod = {wpn_fps_shot_huntsman = {translation = Vector3(0, -3, -3),rotation = Rotation(0, 0, 0)}}},
-	wpn_fps_upg_o_sig = {stance_mod = {wpn_fps_shot_huntsman = {translation = Vector3(0, -3, -3),rotation = Rotation(0, 0, 0)}}},
-	wpn_fps_upg_o_xpsg33_magnifier = {stance_mod = {wpn_fps_shot_huntsman = {translation = Vector3(0, -3, -3),rotation = Rotation(0, 0, 0)}}},
+	wpn_fps_upg_o_t1micro = {stance_mod = {wpn_fps_shot_huntsman = {translation = Vector3(0, -3, -3)}}},
+	wpn_fps_upg_o_docter = {stance_mod = {wpn_fps_shot_huntsman = {translation = Vector3(0, -3, -3)}}},
+	wpn_fps_upg_o_cmore = {stance_mod = {wpn_fps_shot_huntsman = {translation = Vector3(0, -3, -3)}}},
+	wpn_fps_upg_o_cs = {stance_mod = {wpn_fps_shot_huntsman = {translation = Vector3(0, -3, -3)}}},
+	wpn_fps_upg_o_reflex = {stance_mod = {wpn_fps_shot_huntsman = {translation = Vector3(0, -3, -3)}}},
+	wpn_fps_upg_o_rx01 = {stance_mod = {wpn_fps_shot_huntsman = {translation = Vector3(0, -3, -3)}}},
+	wpn_fps_upg_o_eotech = {stance_mod = {wpn_fps_shot_huntsman = {translation = Vector3(0, -3, -3)}}},
+	wpn_fps_upg_o_eotech_xps = {stance_mod = {wpn_fps_shot_huntsman = {translation = Vector3(0, -3, -3)}}},
+	wpn_fps_upg_o_rx30 = {stance_mod = {wpn_fps_shot_huntsman = {translation = Vector3(0, -3, -3)}}},
+	wpn_fps_upg_o_aimpoint = {stance_mod = {wpn_fps_shot_huntsman = {translation = Vector3(0, -3, -3)}}},
+	wpn_fps_upg_o_aimpoint_2 = {stance_mod = {wpn_fps_shot_huntsman = {translation = Vector3(0, -3, -3)}}},
+	wpn_fps_upg_o_specter = {stance_mod = {wpn_fps_shot_huntsman = {translation = Vector3(0, -3, -3)}}},
+	wpn_fps_upg_o_acog = {stance_mod = {wpn_fps_shot_huntsman = {translation = Vector3(0, -3, -3)}}},
+	wpn_fps_upg_o_spot = {stance_mod = {wpn_fps_shot_huntsman = {translation = Vector3(0, -3, -3)}}},
+	wpn_fps_upg_o_uh = {stance_mod = {wpn_fps_shot_huntsman = {translation = Vector3(0, -3, -3)}}},
+	wpn_fps_upg_o_bmg = {stance_mod = {wpn_fps_shot_huntsman = {translation = Vector3(0, -3, -3)}}},
+	wpn_fps_upg_o_fc1 = {stance_mod = {wpn_fps_shot_huntsman = {translation = Vector3(0, -3, -3)}}},
+	wpn_fps_upg_o_sig = {stance_mod = {wpn_fps_shot_huntsman = {translation = Vector3(0, -3, -3)}}},
+	wpn_fps_upg_o_xpsg33_magnifier = {stance_mod = {wpn_fps_shot_huntsman = {translation = Vector3(0, -3, -3)}}},
 	wpn_fps_upg_o_45rds = {stance_mod = {wpn_fps_shot_huntsman = {translation = Vector3(-3.809, -10, -14.18),rotation = Rotation(0, 0, -45)}}},
 	wpn_fps_upg_o_45rds_v2 = {stance_mod = {wpn_fps_shot_huntsman = {translation = Vector3(-3.809, -10, -14.18),rotation = Rotation(0, 0, -45)}}},
-	wpn_fps_upg_o_45steel = {stance_mod = {wpn_fps_shot_huntsman = {translation = Vector3(-3.809, -10, -14.18),rotation = Rotation(0, 0, -45)}}},
+	wpn_fps_upg_o_45steel = {stance_mod = {wpn_fps_shot_huntsman = {translation = Vector3(-3.809, -10, -14.18),rotation = Rotation(0, 0, -45)}}}
 }
 self.parts.wpn_fps_shot_huntsman_b_short.override = {
 	wpn_fps_smg_thompson_o_adapter = {a_obj = "a_o_sm"},
@@ -499,11 +537,11 @@ self.wpn_fps_shot_huntsman.adds = {
 	wpn_fps_upg_o_uh = {"wpn_fps_smg_thompson_o_adapter"},
 	wpn_fps_upg_o_bmg = {"wpn_fps_smg_thompson_o_adapter"},
 	wpn_fps_upg_o_fc1 = {"wpn_fps_smg_thompson_o_adapter"},
-	wpn_fps_upg_fl_pis_x400v = {"wpn_fps_pis_deagle_fg_rail"},
-	wpn_fps_upg_fl_pis_tlr1 = {"wpn_fps_pis_deagle_fg_rail"},
-	wpn_fps_upg_fl_pis_crimson = {"wpn_fps_pis_deagle_fg_rail"},
-	wpn_fps_upg_fl_pis_m3x = {"wpn_fps_pis_deagle_fg_rail"},
-	wpn_fps_upg_fl_pis_laser = {"wpn_fps_pis_deagle_fg_rail"}
+	wpn_fps_upg_fl_pis_x400v = {"wpn_fps_pis_2006m_fl_adapter"},
+	wpn_fps_upg_fl_pis_tlr1 = {"wpn_fps_pis_2006m_fl_adapter"},
+	wpn_fps_upg_fl_pis_crimson = {"wpn_fps_pis_2006m_fl_adapter"},
+	wpn_fps_upg_fl_pis_m3x = {"wpn_fps_pis_2006m_fl_adapter"},
+	wpn_fps_upg_fl_pis_laser = {"wpn_fps_pis_2006m_fl_adapter"}
 }
 table.insert(self.wpn_fps_shot_huntsman.uses_parts, "wpn_fps_upg_o_t1micro")
 table.insert(self.wpn_fps_shot_huntsman.uses_parts, "wpn_fps_upg_o_docter")
@@ -547,18 +585,18 @@ self.wpn_fps_sho_spas12.override = {wpn_fps_shot_r870_body_rack = {a_obj ="a_bod
 table.insert(self.wpn_fps_sho_spas12.uses_parts, "wpn_fps_shot_r870_body_rack")
 --Claire 12G--
 self.wpn_fps_sho_coach.override= {
-	wpn_fps_upg_o_t1micro = {stance_mod = {wpn_fps_sho_coach = {translation = Vector3(0, -3, -3),rotation = Rotation(0, 0, 0)}}},
-	wpn_fps_upg_o_docter = {stance_mod = {wpn_fps_sho_coach = {translation = Vector3(0, -3, -3),rotation = Rotation(0, 0, 0)}}},
-	wpn_fps_upg_o_cmore = {stance_mod = {wpn_fps_sho_coach = {translation = Vector3(0, -3, -3),rotation = Rotation(0, 0, 0)}}},
-	wpn_fps_upg_o_cs = {stance_mod = {wpn_fps_sho_coach = {translation = Vector3(0, -3, -3),rotation = Rotation(0, 0, 0)}}},
-	wpn_fps_upg_o_reflex = {stance_mod = {wpn_fps_sho_coach = {translation = Vector3(0, -3, -3),rotation = Rotation(0, 0, 0)}}},
-	wpn_fps_upg_o_rx01 = {stance_mod = {wpn_fps_sho_coach = {translation = Vector3(0, -3, -3),rotation = Rotation(0, 0, 0)}}},
-	wpn_fps_upg_o_eotech = {stance_mod = {wpn_fps_sho_coach = {translation = Vector3(0, -3, -3),rotation = Rotation(0, 0, 0)}}},
-	wpn_fps_upg_o_eotech_xps = {stance_mod = {wpn_fps_sho_coach = {translation = Vector3(0, -3, -3),rotation = Rotation(0, 0, 0)}}},
-	wpn_fps_upg_o_rx30 = {stance_mod = {wpn_fps_sho_coach = {translation = Vector3(0, -3, -3),rotation = Rotation(0, 0, 0)}}},
-	wpn_fps_upg_o_specter = {stance_mod = {wpn_fps_sho_coach = {translation = Vector3(0, -3, -3),rotation = Rotation(0, 0, 0)}}},
-	wpn_fps_upg_o_uh = {stance_mod = {wpn_fps_sho_coach = {translation = Vector3(0, -3, -3),rotation = Rotation(0, 0, 0)}}},
-	wpn_fps_upg_o_fc1 = {stance_mod = {wpn_fps_sho_coach = {translation = Vector3(0, -3, -3),rotation = Rotation(0, 0, 0)}}}
+	wpn_fps_upg_o_t1micro = {stance_mod = {wpn_fps_sho_coach = {translation = Vector3(0, -3, -3)}}},
+	wpn_fps_upg_o_docter = {stance_mod = {wpn_fps_sho_coach = {translation = Vector3(0, -3, -3)}}},
+	wpn_fps_upg_o_cmore = {stance_mod = {wpn_fps_sho_coach = {translation = Vector3(0, -3, -3)}}},
+	wpn_fps_upg_o_cs = {stance_mod = {wpn_fps_sho_coach = {translation = Vector3(0, -3, -3)}}},
+	wpn_fps_upg_o_reflex = {stance_mod = {wpn_fps_sho_coach = {translation = Vector3(0, -3, -3)}}},
+	wpn_fps_upg_o_rx01 = {stance_mod = {wpn_fps_sho_coach = {translation = Vector3(0, -3, -3)}}},
+	wpn_fps_upg_o_eotech = {stance_mod = {wpn_fps_sho_coach = {translation = Vector3(0, -3, -3)}}},
+	wpn_fps_upg_o_eotech_xps = {stance_mod = {wpn_fps_sho_coach = {translation = Vector3(0, -3, -3)}}},
+	wpn_fps_upg_o_rx30 = {stance_mod = {wpn_fps_sho_coach = {translation = Vector3(0, -3, -3)}}},
+	wpn_fps_upg_o_specter = {stance_mod = {wpn_fps_sho_coach = {translation = Vector3(0, -3, -3)}}},
+	wpn_fps_upg_o_uh = {stance_mod = {wpn_fps_sho_coach = {translation = Vector3(0, -3, -3)}}},
+	wpn_fps_upg_o_fc1 = {stance_mod = {wpn_fps_sho_coach = {translation = Vector3(0, -3, -3)}}}
 }
 self.parts.wpn_fps_sho_coach_b_short.forbids = {
 	"wpn_fps_upg_fl_pis_tlr1",
@@ -607,31 +645,67 @@ table.insert(self.wpn_fps_sho_coach.uses_parts, "wpn_fps_upg_fl_pis_tlr1")
 -----------------------------------------------------------------------------------------------------------------------------------------Sniper Rifles
 --Contractor .308--
 table.insert(self.wpn_fps_snp_tti.uses_parts, "wpn_fps_upg_o_mbus_rear")
+--Lebensauger .308--
+table.insert(self.wpn_fps_snp_wa2000.uses_parts, "wpn_fps_upg_o_mbus_rear")
 -----------------------------------------------------------------------------------------------------------------------------------------Sniper Rifles
 -----------------------------------------------------------------------------------------------------------------------------------------------Pistols
+--Bronco .44--
+self.wpn_fps_pis_rage.adds.wpn_fps_pis_c96_sight = {"wpn_fps_pis_rage_o_adapter"}
+self.parts.wpn_fps_pis_c96_sight.stance_mod.wpn_fps_pis_rage = {translation = Vector3(-0.05, -14, -3.78)}
+table.insert(self.wpn_fps_pis_rage.uses_parts,"wpn_fps_pis_c96_sight")
+table.insert(self.parts.wpn_fps_pis_rage_lock.forbids, "wpn_fps_pis_c96_sight")
+--Deagle--
+self.wpn_fps_pis_deagle.adds.wpn_fps_pis_c96_sight = {"wpn_fps_pis_rage_o_adapter"}
+self.wpn_fps_pis_deagle.override.wpn_fps_pis_c96_sight = {a_obj = "a_quite"}
+self.parts.wpn_fps_pis_c96_sight.stance_mod.wpn_fps_pis_deagle = {translation = Vector3(0, -17, -3.33), rotation = Rotation(0, -0.5, 0)}
+table.insert(self.wpn_fps_pis_deagle.uses_parts,"wpn_fps_pis_c96_sight")
+table.insert(self.parts.wpn_fps_pis_deagle_lock.forbids, "wpn_fps_pis_c96_sight")
 --Bernetti 9--
 self.wpn_fps_pis_beretta.override.wpn_fps_pis_beer_b_robo = {a_obj = "a_b_custom"}
 table.insert(self.wpn_fps_pis_beretta.uses_parts, "wpn_fps_pis_beer_b_robo")
 --Castigo .44--
 self.wpn_fps_pis_chinchilla.override = {
-	wpn_fps_pis_c96_sight = {stance_mod = {wpn_fps_pis_chinchilla = {translation = Vector3(0, -15, -3.204),rotation = Rotation(0, 0, 0)}}},
-	wpn_fps_upg_o_bmg = {stance_mod = {wpn_fps_pis_chinchilla = {translation = Vector3(0, -10, -4),rotation = Rotation(0, 0, 0)}}},
-	wpn_fps_upg_o_acog = {stance_mod = {wpn_fps_pis_chinchilla = {translation = Vector3(0, -10, -4),rotation = Rotation(0, 0, 0)}}},
-	wpn_fps_upg_o_specter = {stance_mod = {wpn_fps_pis_chinchilla = {translation = Vector3(0, -10, -4),rotation = Rotation(0, 0, 0)}}},
-	wpn_fps_upg_o_aimpoint = {stance_mod = {wpn_fps_pis_chinchilla = {translation = Vector3(0, -10, -4),rotation = Rotation(0, 0, 0)}}},
-	wpn_fps_upg_o_aimpoint_2 = {stance_mod = {wpn_fps_pis_chinchilla = {translation = Vector3(0, -10, -4),rotation = Rotation(0, 0, 0)}}},
-	wpn_fps_upg_o_spot = {stance_mod = {wpn_fps_pis_chinchilla = {translation = Vector3(0, -10, -4),rotation = Rotation(0, 0, 0)}}},
-	wpn_fps_upg_o_t1micro = {stance_mod = {wpn_fps_pis_chinchilla = {translation = Vector3(0, -5, -3.6),rotation = Rotation(0, 0, 0)}}},
-	wpn_fps_upg_o_docter = {stance_mod = {wpn_fps_pis_chinchilla = {translation = Vector3(0, -5, -3.6),rotation = Rotation(0, 0, 0)}}},
-	wpn_fps_upg_o_cmore = {stance_mod = {wpn_fps_pis_chinchilla = {translation = Vector3(0, -5, -3.9),rotation = Rotation(0, 0, 0)}}},
-	wpn_fps_upg_o_cs = {stance_mod = {wpn_fps_pis_chinchilla = {translation = Vector3(0, -5, -3.6),rotation = Rotation(0, 0, 0)}}},
-	wpn_fps_upg_o_reflex = {stance_mod = {wpn_fps_pis_chinchilla = {translation = Vector3(0, -5, -3.8),rotation = Rotation(0, 0, 0)}}},
-	wpn_fps_upg_o_rx01 = {stance_mod = {wpn_fps_pis_chinchilla = {translation = Vector3(0, -5, -3.8),rotation = Rotation(0, 0, 0)}}},
-	wpn_fps_upg_o_eotech = {stance_mod = {wpn_fps_pis_chinchilla = {translation = Vector3(0, -5, -3.6),rotation = Rotation(0, 0, 0)}}},
-	wpn_fps_upg_o_eotech_xps = {stance_mod = {wpn_fps_pis_chinchilla = {translation = Vector3(0, -5, -3.8),rotation = Rotation(0, 0, 0)}}},
-	wpn_fps_upg_o_rx30 = {stance_mod = {wpn_fps_pis_chinchilla = {translation = Vector3(0, -5, -3.8),rotation = Rotation(0, 0, 0)}}},
-	wpn_fps_upg_o_uh = {stance_mod = {wpn_fps_pis_chinchilla = {translation = Vector3(0, -5, -3.9),rotation = Rotation(0, 0, 0)}}},
-	wpn_fps_upg_o_fc1 = {stance_mod = {wpn_fps_pis_chinchilla = {translation = Vector3(0, -5, -3.9),rotation = Rotation(0, 0, 0)}}}
+	wpn_fps_pis_c96_sight = {stance_mod = {wpn_fps_pis_chinchilla = {translation = Vector3(0, -15, -3.204)}}},
+	wpn_fps_upg_o_bmg = {stance_mod = {wpn_fps_pis_chinchilla = {translation = Vector3(0, -10, -4)}}},
+	wpn_fps_upg_o_acog = {stance_mod = {wpn_fps_pis_chinchilla = {translation = Vector3(0, -10, -4)}}},
+	wpn_fps_upg_o_specter = {stance_mod = {wpn_fps_pis_chinchilla = {translation = Vector3(0, -10, -4)}}},
+	wpn_fps_upg_o_aimpoint = {stance_mod = {wpn_fps_pis_chinchilla = {translation = Vector3(0, -10, -4)}}},
+	wpn_fps_upg_o_aimpoint_2 = {stance_mod = {wpn_fps_pis_chinchilla = {translation = Vector3(0, -10, -4)}}},
+	wpn_fps_upg_o_spot = {stance_mod = {wpn_fps_pis_chinchilla = {translation = Vector3(0, -10, -4)}}},
+	wpn_fps_upg_o_t1micro = {stance_mod = {wpn_fps_pis_chinchilla = {translation = Vector3(0, -5, -3.6)}}},
+	wpn_fps_upg_o_docter = {stance_mod = {wpn_fps_pis_chinchilla = {translation = Vector3(0, -5, -3.6)}}},
+	wpn_fps_upg_o_cmore = {stance_mod = {wpn_fps_pis_chinchilla = {translation = Vector3(0, -5, -3.9)}}},
+	wpn_fps_upg_o_cs = {stance_mod = {wpn_fps_pis_chinchilla = {translation = Vector3(0, -5, -3.6)}}},
+	wpn_fps_upg_o_reflex = {stance_mod = {wpn_fps_pis_chinchilla = {translation = Vector3(0, -5, -3.8)}}},
+	wpn_fps_upg_o_rx01 = {stance_mod = {wpn_fps_pis_chinchilla = {translation = Vector3(0, -5, -3.8)}}},
+	wpn_fps_upg_o_eotech = {stance_mod = {wpn_fps_pis_chinchilla = {translation = Vector3(0, -5, -3.6)}}},
+	wpn_fps_upg_o_eotech_xps = {stance_mod = {wpn_fps_pis_chinchilla = {translation = Vector3(0, -5, -3.8)}}},
+	wpn_fps_upg_o_rx30 = {stance_mod = {wpn_fps_pis_chinchilla = {translation = Vector3(0, -5, -3.8)}}},
+	wpn_fps_upg_o_uh = {stance_mod = {wpn_fps_pis_chinchilla = {translation = Vector3(0, -5, -3.9)}}},
+	wpn_fps_upg_o_fc1 = {stance_mod = {wpn_fps_pis_chinchilla = {translation = Vector3(0, -5, -3.9)}}}
+}
+self.parts.wpn_fps_pis_chinchilla_g_black.stats = {concealment = 1}
+self.parts.wpn_fps_pis_chinchilla_g_death.stats = {suppression = -2}
+self.parts.wpn_fps_pis_chinchilla_b_satan.stats = {recoil = 2, concealment = -1}
+self.parts.wpn_fps_pis_chinchilla_b_satan.override = {
+	wpn_fps_pis_c96_sight = {stance_mod = {wpn_fps_pis_chinchilla = {translation = Vector3(0, -15, -2.704)}}},
+	wpn_fps_upg_o_bmg = {stance_mod = {wpn_fps_pis_chinchilla = {translation = Vector3(0, -10, -3.5)}}},
+	wpn_fps_upg_o_acog = {stance_mod = {wpn_fps_pis_chinchilla = {translation = Vector3(0, -10, -3.5)}}},
+	wpn_fps_upg_o_specter = {stance_mod = {wpn_fps_pis_chinchilla = {translation = Vector3(0, -10, -3.5)}}},
+	wpn_fps_upg_o_aimpoint = {stance_mod = {wpn_fps_pis_chinchilla = {translation = Vector3(0, -10, -3.5)}}},
+	wpn_fps_upg_o_aimpoint_2 = {stance_mod = {wpn_fps_pis_chinchilla = {translation = Vector3(0, -10, -3.5)}}},
+	wpn_fps_upg_o_spot = {stance_mod = {wpn_fps_pis_chinchilla = {translation = Vector3(0, -10, -3.5)}}},
+	wpn_fps_upg_o_t1micro = {stance_mod = {wpn_fps_pis_chinchilla = {translation = Vector3(0, -5, -3.1)}}},
+	wpn_fps_upg_o_docter = {stance_mod = {wpn_fps_pis_chinchilla = {translation = Vector3(0, -5, -3.1)}}},
+	wpn_fps_upg_o_cmore = {stance_mod = {wpn_fps_pis_chinchilla = {translation = Vector3(0, -5, -3.4)}}},
+	wpn_fps_upg_o_cs = {stance_mod = {wpn_fps_pis_chinchilla = {translation = Vector3(0, -5, -3.1)}}},
+	wpn_fps_upg_o_reflex = {stance_mod = {wpn_fps_pis_chinchilla = {translation = Vector3(0, -5, -3.3)}}},
+	wpn_fps_upg_o_rx01 = {stance_mod = {wpn_fps_pis_chinchilla = {translation = Vector3(0, -5, -3.3)}}},
+	wpn_fps_upg_o_eotech = {stance_mod = {wpn_fps_pis_chinchilla = {translation = Vector3(0, -5, -3.1)}}},
+	wpn_fps_upg_o_eotech_xps = {stance_mod = {wpn_fps_pis_chinchilla = {translation = Vector3(0, -5, -3.3)}}},
+	wpn_fps_upg_o_rx30 = {stance_mod = {wpn_fps_pis_chinchilla = {translation = Vector3(0, -5, -3.3)}}},
+	wpn_fps_upg_o_uh = {stance_mod = {wpn_fps_pis_chinchilla = {translation = Vector3(0, -5, -3.4)}}},
+	wpn_fps_upg_o_fc1 = {stance_mod = {wpn_fps_pis_chinchilla = {translation = Vector3(0, -5, -3.4)}}}
 }
 self.wpn_fps_pis_chinchilla.adds = {
 	wpn_fps_pis_c96_sight = {"wpn_fps_smg_sr2_o_rail"},
@@ -673,14 +747,26 @@ table.insert(self.wpn_fps_pis_chinchilla.uses_parts,"wpn_fps_upg_o_acog")
 table.insert(self.wpn_fps_pis_chinchilla.uses_parts,"wpn_fps_upg_o_bmg")
 -----------------------------------------------------------------------------------------------------------------------------------------------Pistols
 ---------------------------------------------------------------------------------------------------------------------------------------------------SMG
+--Mark 10--
+self.parts.wpn_fps_smg_mac10_s_skel.a_obj = "a_s1"
+self.wpn_fps_smg_mac10.stock_adapter = "wpn_fps_upg_m4_s_adapter"
+table.insert(self.wpn_fps_smg_mac10.uses_parts, "wpn_fps_ass_tecci_ns_special")
+table.insert(self.wpn_fps_smg_mac10.uses_parts, "wpn_fps_upg_m4_s_mk46")
+table.insert(self.wpn_fps_smg_mac10.uses_parts, "wpn_fps_upg_m4_s_ubr")
+table.insert(self.wpn_fps_smg_mac10.uses_parts, "wpn_fps_upg_m4_s_crane")
+table.insert(self.wpn_fps_smg_mac10.uses_parts, "wpn_fps_upg_m4_s_standard")
+table.insert(self.wpn_fps_smg_mac10.uses_parts, "wpn_fps_upg_m4_s_pts")
+table.insert(self.wpn_fps_smg_mac10.uses_parts, "wpn_fps_snp_tti_s_vltor")
 --Para--
 self.wpn_fps_smg_olympic.override = {
 	wpn_fps_upg_m4_m_pmag = {stats = {extra_ammo = 5, reload = -2, suppression = -1, concealment = -1}},
 	wpn_fps_upg_m4_m_l5 = {stats = {extra_ammo = 5, reload = -2, concealment = -1}},
 	wpn_fps_ass_l85a2_m_emag = {stats = {extra_ammo = 5, reload = -2, concealment = -1}},
 	wpn_fps_m4_upg_m_quick = {stats = {extra_ammo = 5, reload = 3, concealment = -2}},
-	wpn_fps_upg_m4_m_quad = {stats = {extra_ammo = 20, recoil = 1, reload = -7, concealment = -4}}
+	wpn_fps_upg_m4_m_quad = {stats = {extra_ammo = 20, recoil = 1, reload = -5, concealment = -4}}
 }
+--Uzi--
+table.insert(self.wpn_fps_smg_uzi.uses_parts, "wpn_fps_smg_cobray_ns_barrelextension")
 --Jacket's Piece--
 self.parts.wpn_fps_smg_cobray_body_upper_jacket.stats = {concealment = -1, suppression = -5}
 ---------------------------------------------------------------------------------------------------------------------------------------------------SMG

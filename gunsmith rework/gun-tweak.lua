@@ -34,6 +34,16 @@ self.akm.stats.damage = 92
 --JP36--
 self.g36.stats.damage = 55
 --Galant--
+self:SetupAttachmentPoint( "ching", {
+	name = "a_o_side",
+	base_a_obj = "a_body",
+	position = Vector3( -4.1, 28.8, 9.3 )}
+)
+self:SetupAttachmentPoint( "ching", {
+	name = "a_o_mount",
+	base_a_obj = "a_body",
+	position = Vector3( -0.8, 31.8, 5.5 ), rotation = RotationCAP(180, 0, 0)
+})
 self.ching.AMMO_PICKUP = {0.7, 2.50}
 --M308--
 self.new_m14.stats.damage = 95
@@ -66,6 +76,11 @@ self.flint.stats.damage = 45
 self.flint.CLIP_AMMO_MAX = 30 -- magazine size.
 self.flint.AMMO_MAX = 90 -- total ammo.
 --Bootleg--
+self:SetupAttachmentPoint( "tecci", {
+	name = "a_vg_new",
+	base_a_obj = "a_vg",
+	position = Vector3( 0, 3.5, 0 )}
+)
 self.tecci.stats.damage = 55
 --Queen's Wrath--
 self.l85a2.stats.damage = 55
@@ -129,14 +144,6 @@ self:SetupAttachmentPoint( "huntsman", {
 		"g_long_barrel"},	
 	position = Vector3( 0, 36, -0.8 )
 })
-self:SetupAttachmentPoint( "huntsman", {
-	name = "a_fg",
-	base_a_obj = "a_b",
-	part_attach_data = {
-		{"wpn_fps_shot_huntsman_b_long"},
-		"g_long_barrel"},	
-	position = Vector3( 0, 34, 0 )
-})
 --Breaker 12G--
 self.boot.CLIP_AMMO_MAX = 5 -- magazine size.
 self.boot.AMMO_MAX = 20 -- total ammo.
@@ -189,6 +196,16 @@ self:SetupAttachmentPoint( "b682", {
 --Platypus 70--
 --Rattlesnake--
 --Lebensauger .308--
+self:SetupAttachmentPoint( "wa2000", {
+	name = "a_o_r",
+	base_a_obj = "a_o",
+	position = Vector3( 0, -14, -0.1 )}
+)
+self:SetupAttachmentPoint( "wa2000", {
+	name = "a_o_f",
+	base_a_obj = "a_o",
+	position = Vector3( 0, -0.5, -0.1 )}
+)
 self.wa2000.CLIP_AMMO_MAX = 6 -- magazine size.
 self.wa2000.AMMO_MAX = 42 -- total ammo.
 --Desertfox--
@@ -233,7 +250,7 @@ self.pl14.CLIP_AMMO_MAX = 15 -- magazine size.
 self:SetupAttachmentPoint( "chinchilla", {
 	name = "a_o",
 	base_a_obj = "a_body",
-	position = Vector3( 0.7, 8, 6.35 )}
+	position = Vector3( 0.7, 9, 6.35 )}
 )
 --Crosskill Guard--
 self.shrew.CLIP_AMMO_MAX = 7 -- magazine size.
@@ -308,6 +325,16 @@ self.m37.CLIP_AMMO_MAX = 4 -- magazine size.
 --The Judge--
 --------------SMG--------------
 --Mark 10--
+self:SetupAttachmentPoint( "mac10", {
+	name = "a_s1",
+	base_a_obj = "a_s",
+	position = Vector3( 0, 0, 0 )}
+)
+self:SetupAttachmentPoint( "mac10", {
+	name = "a_s",
+	base_a_obj = "a_s",
+	position = Vector3( 0, 0, 3.3 )}
+)
 self.mac10.CLIP_AMMO_MAX = 16 -- magazine size.
 --Compact-5--
 --CMP--
