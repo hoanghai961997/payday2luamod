@@ -1,0 +1,6 @@
+<dynamic_object>
+    <diesel orientation_object="rp_wpn_fps_upg_o_45iron" materials="units/mods/weapons/wpn_fps_ass_ching_pts/wpn_fps_upg_o_45iron_dummy" />
+    <graphics>
+        <object enabled="false" name="g_ironsight" />
+    </graphics>
+</dynamic_object>

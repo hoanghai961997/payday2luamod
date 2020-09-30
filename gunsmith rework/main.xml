@@ -1,0 +1,21 @@
+<table name="Gun Customization +">
+	<Localization directory="Localization" default="english.txt">
+	</Localization>
+	<AddFiles directory="assets">
+
+	<unit            path="units/mods/weapons/wpn_fps_pis_beretta_m_extended/wpn_fps_pis_beretta_m_extended"/>
+	<object          path="units/mods/weapons/wpn_fps_pis_beretta_m_extended/wpn_fps_pis_beretta_m_extended"/>
+	<model           path="units/mods/weapons/wpn_fps_pis_beretta_m_extended/wpn_fps_pis_beretta_m_extended"/>
+	<cooked_physics  path="units/mods/weapons/wpn_fps_pis_beretta_m_extended/wpn_fps_pis_beretta_m_extended"/>
+	<material_config path="units/mods/weapons/wpn_fps_pis_beretta_m_extended/wpn_fps_pis_beretta_m_extended"/>
+	<material_config path="units/mods/weapons/wpn_fps_pis_beretta_m_extended/wpn_fps_pis_beretta_m_extended_thq"/>
+	<material_config path="units/mods/weapons/wpn_fps_pis_beretta_m_extended/wpn_fps_pis_beretta_m_extended_cc"/>
+	<material_config path="units/mods/weapons/wpn_fps_pis_beretta_m_extended/wpn_fps_pis_beretta_m_extended_cc_thq"/>
+
+	<unit			 path="units/mods/weapons/wpn_fps_ass_ching_pts/wpn_fps_upg_o_45iron_dummy"/>
+	<object			 path="units/mods/weapons/wpn_fps_ass_ching_pts/wpn_fps_upg_o_45iron_dummy"/>
+	<model 			 path="units/mods/weapons/wpn_fps_ass_ching_pts/wpn_fps_upg_o_45iron_dummy"/>
+	<cooked_physics  path="units/mods/weapons/wpn_fps_ass_ching_pts/wpn_fps_upg_o_45iron_dummy"/>	
+	<material_config path="units/mods/weapons/wpn_fps_ass_ching_pts/wpn_fps_upg_o_45iron_dummy"/>
+	</AddFiles>
+</table>

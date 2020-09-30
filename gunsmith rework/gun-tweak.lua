@@ -235,10 +235,35 @@ self.glock_17.AMMO_MAX = 152 -- total ammo.
 self.colt_1911.CLIP_AMMO_MAX = 7 -- magazine size.
 self.colt_1911.AMMO_MAX = 91 -- total ammo.
 --Bernetti 9--
-self:SetupAttachmentPoint( "b92fs", {
-	name = "a_b_custom",
+self:SetupAttachmentPoint( "b92fs", { --Weller Barrel
+	name = "a_b_weller",
 	base_a_obj = "a_sl",
-	position = Vector3( 0, 7.2, -1.45 )}
+	position = Vector3( 0, 7.2, -1.35 )}
+)
+self:SetupAttachmentPoint( "b92fs", { --Weller Barrel Ext
+	name = "a_co_weller",
+	base_a_obj = "a_co",
+	position = Vector3( 0, 16.5, 0 )}
+)
+self:SetupAttachmentPoint( "b92fs", { -- Weller Barrel Sight
+	name = "a_o_weller",
+	base_a_obj = "a_o",
+	position = Vector3( 0, -0.5, -0.2 )}
+)
+self:SetupAttachmentPoint( "b92fs", { -- Weller Barrel Gadget
+	name = "a_fl_2",
+	base_a_obj = "a_fl",
+	position = Vector3( 0, 10, -2.3 )}
+)
+self:SetupAttachmentPoint("b92fs", { -- Extended Mag
+	name = "a_mn",
+	base_a_obj = "a_m",
+	position = Vector3(0, 0.4, 1.65)}
+)
+self:SetupAttachmentPoint("b92fs", { -- Stock
+	name = "a_s",
+	base_a_obj = "a_body",
+	position = Vector3(0, -6.6, -5.5)}
 )
 self.b92fs.CLIP_AMMO_MAX = 15 -- magazine size.
 self.b92fs.AMMO_MAX = 150 -- total ammo.
@@ -274,6 +299,16 @@ self.p226.AMMO_MAX = 91 -- total ammo.
 --Peacemaker .45--
 --Matever .357--
 --Bernetti Auto--
+ self:SetupAttachmentPoint("beer", {
+	name = "a_nsn",
+	base_a_obj = "a_ns",
+	position = Vector3(0, -1.2, 0)}
+)
+self:SetupAttachmentPoint("beer", {
+	name = "a_o_f",
+	base_a_obj = "a_o",
+	position = Vector3(0, 18.6, 0)}
+)
 --Czech 92--
 --Igor Automatik--
 --HOLT 9mm--
