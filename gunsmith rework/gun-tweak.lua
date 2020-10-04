@@ -6,21 +6,6 @@ self:SetupAttachmentPoint( "amcar", {
 	base_a_obj = "a_o",
 	position = Vector3( 0, -1.2, 3.9 )}
 )
-self:SetupAttachmentPoint( "amcar", {
-	name = "a_os_new",
-	base_a_obj = "a_os",
-	position = Vector3( 0, 5.7, 2.6 )}
-)
-self:SetupAttachmentPoint( "amcar", {
-	name = "a_os_new1",
-	base_a_obj = "a_os",
-	position = Vector3( 0, 0.7, 2.6 )}
-)
-self:SetupAttachmentPoint( "amcar", {
-	name = "a_fl",
-	base_a_obj = "a_fl",
-	position = Vector3( -0.9, 0, 0.1 )}
-)
 self.amcar.stats.damage = 55
 self.amcar.AMMO_MAX = 240
 --AK--
@@ -46,6 +31,11 @@ self:SetupAttachmentPoint( "ching", {
 })
 self.ching.AMMO_PICKUP = {0.7, 2.50}
 --M308--
+self:SetupAttachmentPoint( "new_m14", {
+	name = "a_o",
+	base_a_obj = "a_o",
+	position = Vector3( 0, 5, 0 )}
+)
 self.new_m14.stats.damage = 95
 self.new_m14.CLIP_AMMO_MAX = 20 -- magazine size.
 self.new_m14.AMMO_MAX = 60 -- total ammo.
@@ -54,6 +44,16 @@ self.new_m14.AMMO_PICKUP = {0.7, 2.45} --ammo pickup.
 self.ak5.stats.damage = 55
 self.ak5.AMMO_MAX = 120
 --AMR-16--
+self:SetupAttachmentPoint( "m16", {
+	name = "a_o_r",
+	base_a_obj = "a_o",
+	position = Vector3( 0, -16, 0 )}
+)
+self:SetupAttachmentPoint( "m16", {
+	name = "a_o_f",
+	base_a_obj = "a_o",
+	position = Vector3( 0, 30, 0 )}
+)
 self.m16.stats.damage = 55
 self.m16.CLIP_AMMO_MAX = 20 -- magazine size.
 self.m16.AMMO_MAX = 120 -- total ammo.
@@ -92,6 +92,11 @@ self.famas.AMMO_MAX = 75 -- total ammo.
 --Lion's Roar--
 self.vhs.stats.damage = 55
 --Valkyria--
+self:SetupAttachmentPoint( "asval", {
+	name = "a_fl",
+	base_a_obj = "a_fl",
+	position = Vector3( 0, 1, 0 )}
+)
 self.asval.stats.damage = 42
 --Gecko 7.62--
 self.galil.stats.damage = 95
@@ -126,24 +131,21 @@ self:SetupAttachmentPoint( "huntsman", {
 	part_attach_data = {
 		{"wpn_fps_shot_huntsman_b_long"},
 		"g_long_barrel"},	
-	position = Vector3( 0, 16.4, 2 )
-})
+	position = Vector3( 0, 16.4, 2 )}
+)
 self:SetupAttachmentPoint( "huntsman", {
 	name = "a_o_sm",
 	base_a_obj = "a_b",
 	part_attach_data = {
 		{"wpn_fps_shot_huntsman_b_short"},
 		"g_short_barrel"},	
-	position = Vector3( 0, 16.4, 2 )
-})
+	position = Vector3( 0, 16.4, 2 )}
+)
 self:SetupAttachmentPoint( "huntsman", {
 	name = "a_fl",
-	base_a_obj = "a_b",
-	part_attach_data = {
-		{"wpn_fps_shot_huntsman_b_long"},
-		"g_long_barrel"},	
-	position = Vector3( 0, 36, -0.8 )
-})
+	base_a_obj = "a_body",
+	position = Vector3( 2.7, 1, -3 ), rotation = RotationCAP(0, 0, 22)}
+)
 --Breaker 12G--
 self.boot.CLIP_AMMO_MAX = 5 -- magazine size.
 self.boot.AMMO_MAX = 20 -- total ammo.
@@ -340,19 +342,8 @@ self:SetupAttachmentPoint( "coach", {
 })
 self:SetupAttachmentPoint( "coach", {
 	name = "a_fl",
-	base_a_obj = "a_b",
-	part_attach_data = {
-		{"wpn_fps_sho_coach_b_standard","wpn_fps_sho_coach_b_short"},
-		"g_barrel"},	
-	position = Vector3( 0, 34, 0.9 )
-})
-self:SetupAttachmentPoint( "coach", {
-	name = "a_fg",
-	base_a_obj = "a_b",
-	part_attach_data = {
-		{"wpn_fps_sho_coach_b_standard","wpn_fps_sho_coach_b_short"},
-		"g_barrel"},	
-	position = Vector3( 0, 32, 1.8 )
+	base_a_obj = "a_body",
+	position = Vector3( 2.8, 14, 4.2 ), rotation = RotationCAP(0, 0, 10)
 })
 --GSPS 12G--
 self.m37.CLIP_AMMO_MAX = 4 -- magazine size.

@@ -1,4 +1,5 @@
 {
 	"bm_wp_beretta_m_extended" : "30rnd Mag."
 	"bm_wp_beer_m_extended" : "20rnd Mag."
+	"bm_wp_m16_fg_railed" : "Long Railed Foregrip"
 }
