@@ -229,6 +229,16 @@ self.r93.CLIP_AMMO_MAX = 5
 --Nagant--
 --Thanatos .50 cal--
 --R700--
+self:SetupAttachmentPoint( "r700", {
+	name = "a_o_r",
+	base_a_obj = "a_o",
+	position = Vector3( 0, -16, -0.1 )}
+)
+self:SetupAttachmentPoint( "r700", {
+	name = "a_o_f",
+	base_a_obj = "a_o",
+	position = Vector3( 0, 1.5, -0.1 )}
+)
 -------------Pistol------------
 --Chimano 88--
 self.glock_17.CLIP_AMMO_MAX = 19 -- magazine size.
