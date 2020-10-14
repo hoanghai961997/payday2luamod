@@ -29,6 +29,11 @@ self:SetupAttachmentPoint( "ching", {
 	base_a_obj = "a_body",
 	position = Vector3( -0.8, 31.8, 5.5 ), rotation = RotationCAP(180, 0, 0)
 })
+self:SetupAttachmentPoint( "ching", {
+		name = "a_m_integrated",
+		base_a_obj = "a_body",
+		position = Vector3(0, 18, -2)
+})
 self.ching.AMMO_PICKUP = {0.7, 2.50}
 --M308--
 self:SetupAttachmentPoint( "new_m14", {
@@ -197,6 +202,21 @@ self:SetupAttachmentPoint( "b682", {
 ----------Sniper Rilfe---------
 --Platypus 70--
 --Rattlesnake--
+self:SetupAttachmentPoint( "msr", {
+	name = "a_o_r",
+	base_a_obj = "a_o",
+	position = Vector3( 0, -18, 0 )}
+)
+self:SetupAttachmentPoint( "msr", {
+	name = "a_o_f",
+	base_a_obj = "a_o",
+	position = Vector3( 0, 40, 0 )}
+)
+self:SetupAttachmentPoint( "msr", {
+	name = "a_fl",
+	base_a_obj = "a_fl",
+	position = Vector3( 0.5, 40, 2.3 )}
+)
 --Lebensauger .308--
 self:SetupAttachmentPoint( "wa2000", {
 	name = "a_o_r",
@@ -211,6 +231,16 @@ self:SetupAttachmentPoint( "wa2000", {
 self.wa2000.CLIP_AMMO_MAX = 6 -- magazine size.
 self.wa2000.AMMO_MAX = 42 -- total ammo.
 --Desertfox--
+self:SetupAttachmentPoint( "desertfox", {
+	name = "a_o_r",
+	base_a_obj = "a_o",
+	position = Vector3( 0, -20, -0.1 )}
+)
+self:SetupAttachmentPoint( "desertfox", {
+	name = "a_o_f",
+	base_a_obj = "a_o",
+	position = Vector3( 0, 15, -0.1 )}
+)
 --Contractor .308--
 self:SetupAttachmentPoint( "tti", {
 	name = "a_o_r",

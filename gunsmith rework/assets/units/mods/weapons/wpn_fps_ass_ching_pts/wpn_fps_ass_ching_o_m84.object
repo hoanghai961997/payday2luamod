@@ -1,0 +1,9 @@
+<dynamic_object>
+    <diesel orientation_object="rp_specter" materials="units/mods/weapons/wpn_fps_ass_ching_pts/wpn_fps_ass_ching_o_m84" />
+    <graphics>
+        <object enabled="true" name="g_specter" />
+        <object enabled="true" name="g_glass" />
+        <object enabled="false" name="g_gfx" />
+        <object enabled="true" name="g_gfx_specter" />
+    </graphics>
+</dynamic_object>

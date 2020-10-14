@@ -1,8 +1,32 @@
 <table name="Gun Customization +">
 	<Localization directory="Localization" default="english.txt">
 	</Localization>
+	--Galant Mods--
+	<WeaponMod id="wpn_fps_ass_ching_o_m84" based_on="wpn_fps_upg_o_specter" type="sight" texture_switch="nil" unit="units/mods/weapons/wpn_fps_ass_ching_pts/wpn_fps_ass_ching_o_m84" drop="false" texture_bundle_folder="mods" is_a_unlockable="true">
+		<stats spread="1" recoil="1" concealment="0" zoom="20"/>
+		<adds>
+			<value_node value="wpn_fps_upg_o_backup"/>
+		</adds>
+		<weapons>
+			<value_node value="wpn_fps_ass_ching"/>
+		</weapons>
+	</WeaponMod>
+	<WeaponMod id="wpn_fps_ass_ching_ns_flashhider" based_on="wpn_fps_upg_ass_ns_linear" type="barrel_ext" unit="units/mods/weapons/wpn_fps_ass_ching_pts/wpn_fps_ass_ching_ns_flashhider" drop="false" texture_bundle_folder="mods" is_a_unlockable="true">
+		<stats spread="-1" damage="5" concealment="-1"/>
+		<weapons>
+			<value_node value="wpn_fps_ass_ching"/>
+		</weapons>
+		<pcs/>
+	</WeaponMod>
+	
+	<WeaponMod id="wpn_fps_ass_ching_ns_expsilencer" based_on="wpn_fps_upg_ns_ass_smg_medium" type="barrel_ext" unit="units/mods/weapons/wpn_fps_ass_ching_pts/wpn_fps_ass_ching_ns_expsilencer" drop="false" texture_bundle_folder="mods" is_a_unlockable="true">
+		<stats recoil="-1" damage="-5" concealment="0"/>
+		<weapons>
+			<value_node value="wpn_fps_ass_ching"/>
+		</weapons>
+		<pcs/>
+	</WeaponMod>
 	<AddFiles directory="assets">
-
 	<unit            path="units/mods/weapons/wpn_fps_pis_beretta_m_extended/wpn_fps_pis_beretta_m_extended"/>
 	<object          path="units/mods/weapons/wpn_fps_pis_beretta_m_extended/wpn_fps_pis_beretta_m_extended"/>
 	<model           path="units/mods/weapons/wpn_fps_pis_beretta_m_extended/wpn_fps_pis_beretta_m_extended"/>
@@ -11,11 +35,44 @@
 	<material_config path="units/mods/weapons/wpn_fps_pis_beretta_m_extended/wpn_fps_pis_beretta_m_extended_thq"/>
 	<material_config path="units/mods/weapons/wpn_fps_pis_beretta_m_extended/wpn_fps_pis_beretta_m_extended_cc"/>
 	<material_config path="units/mods/weapons/wpn_fps_pis_beretta_m_extended/wpn_fps_pis_beretta_m_extended_cc_thq"/>
-
+	<texture 		 path="units/mods/weapons/wpn_fps_ass_ching_pts/scope_df"/>
+	<texture 		 path="units/mods/weapons/wpn_fps_ass_ching_pts/scope_df_cc"/>
+	<texture		 path="units/mods/weapons/wpn_fps_ass_ching_pts/scope_nm"/>
+	<cooked_physics  path="units/mods/weapons/wpn_fps_ass_ching_pts/wpn_fps_ass_ching_o_m84"/>
+	<model 		 	 path="units/mods/weapons/wpn_fps_ass_ching_pts/wpn_fps_ass_ching_o_m84"/>
+	<object 		 path="units/mods/weapons/wpn_fps_ass_ching_pts/wpn_fps_ass_ching_o_m84"/>
+	<unit 			 path="units/mods/weapons/wpn_fps_ass_ching_pts/wpn_fps_ass_ching_o_m84"/>
+	<material_config path="units/mods/weapons/wpn_fps_ass_ching_pts/wpn_fps_ass_ching_o_m84"/>
+	<material_config path="units/mods/weapons/wpn_fps_ass_ching_pts/wpn_fps_ass_ching_o_m84_thq"/>
+	<material_config path="units/mods/weapons/wpn_fps_ass_ching_pts/wpn_fps_ass_ching_o_m84_cc"/>
+	<material_config path="units/mods/weapons/wpn_fps_ass_ching_pts/wpn_fps_ass_ching_o_m84_cc_thq"/>
 	<unit			 path="units/mods/weapons/wpn_fps_ass_ching_pts/wpn_fps_upg_o_45iron_dummy"/>
 	<object			 path="units/mods/weapons/wpn_fps_ass_ching_pts/wpn_fps_upg_o_45iron_dummy"/>
 	<model 			 path="units/mods/weapons/wpn_fps_ass_ching_pts/wpn_fps_upg_o_45iron_dummy"/>
-	<cooked_physics  path="units/mods/weapons/wpn_fps_ass_ching_pts/wpn_fps_upg_o_45iron_dummy"/>	
-	<material_config path="units/mods/weapons/wpn_fps_ass_ching_pts/wpn_fps_upg_o_45iron_dummy"/>
+	<cooked_physics  path="units/mods/weapons/wpn_fps_ass_ching_pts/wpn_fps_upg_o_45iron_dummy"/>
+	<material_config path="units/mods/weapons/wpn_fps_ass_ching_pts/wpn_fps_upg_o_45iron_dummy"/>		
+	<texture 		 path="units/mods/weapons/wpn_fps_ass_ching_pts/barrelext_df"/>
+	<texture 		 path="units/mods/weapons/wpn_fps_ass_ching_pts/barrelext_df_cc"/>
+	<texture 		 path="units/mods/weapons/wpn_fps_ass_ching_pts/barrelext_nm"/>
+	<cooked_physics  path="units/mods/weapons/wpn_fps_ass_ching_pts/wpn_fps_ass_ching_ns_flashhider"/>
+	<model 			 path="units/mods/weapons/wpn_fps_ass_ching_pts/wpn_fps_ass_ching_ns_flashhider"/>
+	<object 		 path="units/mods/weapons/wpn_fps_ass_ching_pts/wpn_fps_ass_ching_ns_flashhider"/>
+	<unit 			 path="units/mods/weapons/wpn_fps_ass_ching_pts/wpn_fps_ass_ching_ns_flashhider"/>
+	<material_config path="units/mods/weapons/wpn_fps_ass_ching_pts/wpn_fps_ass_ching_ns_flashhider"/>
+	<material_config path="units/mods/weapons/wpn_fps_ass_ching_pts/wpn_fps_ass_ching_ns_flashhider_thq"/>
+	<material_config path="units/mods/weapons/wpn_fps_ass_ching_pts/wpn_fps_ass_ching_ns_flashhider_cc"/>
+	<material_config path="units/mods/weapons/wpn_fps_ass_ching_pts/wpn_fps_ass_ching_ns_flashhider_cc_thq"/>
+	<cooked_physics  path="units/mods/weapons/wpn_fps_ass_ching_pts/wpn_fps_ass_ching_ns_expsilencer"/>
+	<model 			 path="units/mods/weapons/wpn_fps_ass_ching_pts/wpn_fps_ass_ching_ns_expsilencer"/>
+	<object 		 path="units/mods/weapons/wpn_fps_ass_ching_pts/wpn_fps_ass_ching_ns_expsilencer"/>
+	<unit 			 path="units/mods/weapons/wpn_fps_ass_ching_pts/wpn_fps_ass_ching_ns_expsilencer"/>
+	<material_config path="units/mods/weapons/wpn_fps_ass_ching_pts/wpn_fps_ass_ching_ns_expsilencer"/>
+	<material_config path="units/mods/weapons/wpn_fps_ass_ching_pts/wpn_fps_ass_ching_ns_expsilencer_thq"/>
+	<material_config path="units/mods/weapons/wpn_fps_ass_ching_pts/wpn_fps_ass_ching_ns_expsilencer_cc"/>
+	<material_config path="units/mods/weapons/wpn_fps_ass_ching_pts/wpn_fps_ass_ching_ns_expsilencer_cc_thq"/>
+	<texture		 path="guis/dlcs/mods/textures/pd2/blackmarket/icons/mods/wpn_fps_ass_ching_ns_expsilencer"/>
+	<texture		 path="guis/dlcs/mods/textures/pd2/blackmarket/icons/mods/wpn_fps_ass_ching_ns_flashhider"/>
+	<texture		 path="guis/dlcs/mods/textures/pd2/blackmarket/icons/mods/wpn_fps_ass_ching_o_m84"/>
+	<texture		 path="guis/garandmod"/>
 	</AddFiles>
 </table>

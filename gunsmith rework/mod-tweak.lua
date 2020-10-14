@@ -808,7 +808,15 @@ self.parts.wpn_fps_ass_ching_fg_standard.override = {
 		stance_mod ={wpn_fps_ass_ching = {translation = Vector3(4, -9, -1)}}
 	}
 }
-self.wpn_fps_ass_ching.adds = {}
+self.parts.wpn_fps_ass_ching_o_m84.stance_mod = {wpn_fps_ass_ching = {translation = Vector3(4.15, -37.5, 0)}}
+self.parts.wpn_fps_ass_ching_o_m84.forbids = {
+	"wpn_fps_upg_o_45rds",
+	"wpn_fps_upg_o_45rds_v2",
+	"wpn_fps_upg_o_45steel",
+	"wpn_fps_upg_o_xpsg33_magnifier",
+	"wpn_fps_upg_o_sig"
+}
+self.wpn_fps_ass_ching.adds = nil
 table.insert(self.wpn_fps_ass_ching.uses_parts, "wpn_fps_pis_c96_sight")
 --Commando 553--
 self.parts.wpn_fps_pis_c96_sight.stance_mod.wpn_fps_ass_s552 = {translation = Vector3(-0.08, 0, -1.1)}
@@ -1070,6 +1078,75 @@ table.insert(self.wpn_fps_sho_coach.uses_parts, "wpn_fps_upg_fl_ass_peq15")
 table.insert(self.wpn_fps_sho_coach.uses_parts, "wpn_fps_upg_fl_ass_utg")
 ----------------------------------------------------------------------------------------------------------------------------------------------Shotguns
 -----------------------------------------------------------------------------------------------------------------------------------------Sniper Rifles
+--Platypus 70--
+self.wpn_fps_snp_model70.override = {
+	wpn_fps_upg_o_docter = {stats = {concealment = 2}},
+	wpn_fps_upg_o_t1micro = {stats = {concealment = 2}},
+	wpn_fps_upg_o_reflex = {stats = {concealment = 2}},
+	wpn_fps_upg_o_eotech_xps = {stats = {concealment = 2}},
+	wpn_fps_upg_o_fc1 = {stats = {concealment = 2}},
+	wpn_fps_upg_o_rx01 = {stats = {zoom = 3, recoil = 1, concealment = 1}},
+	wpn_fps_upg_o_eotech = {stats = {zoom = 3, recoil = 1, concealment = 1}},
+	wpn_fps_upg_o_rx30 = {stats = {zoom = 3, recoil = 1, concealment = 1}},
+	wpn_fps_upg_o_uh = {stats = {zoom = 3, recoil = 1, concealment = 1}},
+	wpn_fps_upg_o_cmore = {stats = {zoom = 3, recoil = 1, concealment = 1}},
+	wpn_fps_upg_o_cs = {stats = {zoom = 4, concealment = 1}},
+	wpn_fps_upg_o_specter = {stats = {zoom = 4, concealment = 1}},
+	wpn_fps_upg_o_aimpoint_2 = {stats = {zoom = 6, spread = 1}},
+	wpn_fps_upg_o_aimpoint = {stats = {zoom = 6, spread = 1}},
+	wpn_fps_upg_o_acog = {stats = {zoom = 6, spread = 1}},
+	wpn_fps_upg_o_bmg = {stats = {zoom = 6, spread = 1}},
+	wpn_fps_upg_o_spot = {stats = {zoom = 5}}
+}
+self.parts.wpn_fps_snp_model70_iron_sight.stats = {concealment = 3}
+--Desertfox--
+self.wpn_fps_snp_desertfox.override = {
+	wpn_fps_upg_o_mbus_rear = {stats = {concealment = 3}},
+	wpn_fps_upg_o_docter = {stats = {concealment = 2}},
+	wpn_fps_upg_o_t1micro = {stats = {concealment = 2}},
+	wpn_fps_upg_o_reflex = {stats = {concealment = 2}},
+	wpn_fps_upg_o_eotech_xps = {stats = {concealment = 2}},
+	wpn_fps_upg_o_fc1 = {stats = {concealment = 2}},
+	wpn_fps_upg_o_rx01 = {stats = {zoom = 3, recoil = 1, concealment = 1}},
+	wpn_fps_upg_o_eotech = {stats = {zoom = 3, recoil = 1, concealment = 1}},
+	wpn_fps_upg_o_rx30 = {stats = {zoom = 3, recoil = 1, concealment = 1}},
+	wpn_fps_upg_o_uh = {stats = {zoom = 3, recoil = 1, concealment = 1}},
+	wpn_fps_upg_o_cmore = {stats = {zoom = 3, recoil = 1, concealment = 1}},
+	wpn_fps_upg_o_cs = {stats = {zoom = 4, concealment = 1}},
+	wpn_fps_upg_o_specter = {stats = {zoom = 4, concealment = 1}},
+	wpn_fps_upg_o_aimpoint_2 = {stats = {zoom = 6, spread = 1}},
+	wpn_fps_upg_o_aimpoint = {stats = {zoom = 6, spread = 1}},
+	wpn_fps_upg_o_acog = {stats = {zoom = 6, spread = 1}},
+	wpn_fps_upg_o_bmg = {stats = {zoom = 6, spread = 1}},
+	wpn_fps_upg_o_spot = {stats = {zoom = 5}}
+}
+table.insert(self.wpn_fps_snp_desertfox.uses_parts, "wpn_fps_upg_o_mbus_rear")
+--Nagant--
+self.parts.wpn_fps_snp_mosin_iron_sight.stats = {concealment = 3}
+--Rattlesnake--
+self.wpn_fps_snp_msr.override = {
+	wpn_fps_upg_o_mbus_rear = {stats = {concealment = 3}},
+	wpn_fps_upg_o_docter = {stats = {concealment = 2}},
+	wpn_fps_upg_o_t1micro = {stats = {concealment = 2}},
+	wpn_fps_upg_o_reflex = {stats = {concealment = 2}},
+	wpn_fps_upg_o_eotech_xps = {stats = {concealment = 2}},
+	wpn_fps_upg_o_fc1 = {stats = {concealment = 2}},
+	wpn_fps_upg_o_rx01 = {stats = {zoom = 3, recoil = 1, concealment = 1}},
+	wpn_fps_upg_o_eotech = {stats = {zoom = 3, recoil = 1, concealment = 1}},
+	wpn_fps_upg_o_rx30 = {stats = {zoom = 3, recoil = 1, concealment = 1}},
+	wpn_fps_upg_o_uh = {stats = {zoom = 3, recoil = 1, concealment = 1}},
+	wpn_fps_upg_o_cmore = {stats = {zoom = 3, recoil = 1, concealment = 1}},
+	wpn_fps_upg_o_cs = {stats = {zoom = 4, concealment = 1}},
+	wpn_fps_upg_o_specter = {stats = {zoom = 4, concealment = 1}},
+	wpn_fps_upg_o_aimpoint_2 = {stats = {zoom = 6, spread = 1}},
+	wpn_fps_upg_o_aimpoint = {stats = {zoom = 6, spread = 1}},
+	wpn_fps_upg_o_acog = {stats = {zoom = 6, spread = 1}},
+	wpn_fps_upg_o_bmg = {stats = {zoom = 6, spread = 1}},
+	wpn_fps_upg_o_spot = {stats = {zoom = 5}}
+}
+self.parts.wpn_fps_snp_msr_body_msr.forbids = {"wpn_fps_addon_ris"}
+self.parts.wpn_fps_snp_msr_body_wood.forbids = {"wpn_fps_addon_ris"}
+table.insert(self.wpn_fps_snp_msr.uses_parts, "wpn_fps_upg_o_mbus_rear")
 --Contractor .308--
 self.wpn_fps_snp_tti.override = {
 	wpn_fps_upg_o_mbus_rear = {stats = {concealment = 3}},

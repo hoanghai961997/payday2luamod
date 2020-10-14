@@ -2,4 +2,7 @@
 	"bm_wp_beretta_m_extended" : "30rnd Mag."
 	"bm_wp_beer_m_extended" : "20rnd Mag."
 	"bm_wp_m16_fg_railed" : "Long Railed Foregrip"
+	"bm_wp_wpn_fps_ass_ching_o_m84" : "M84 Scope"
+	"bm_wp_wpn_fps_ass_ching_ns_flashhider" : "Flash Hider"
+	"bm_wp_wpn_fps_ass_ching_ns_expsilencer" : "Experimental Silencer"
 }
